@@ -1,10 +1,10 @@
----
+#---
 layout: post
 title:  paper reading：Merge Path - Parallel Merging Made Simple
 keywords: paper-并行merge排序
 categories : [并行排序]
 tags : [负载均衡]
----
+#---
 # Merge Path - Parallel Merging Made Simple
 ### 来源：2014 IPDPS
 
@@ -14,10 +14,10 @@ Parallel merging two sorted arrays。解决这个问题，需要从以下几个�
 
 - balancing the load among compute
 cores
--minimizing the extra work brought about by
+- minimizing the extra work brought about by
 parallelization
--minimizing inter-thread synchronization
--Efficient use of memory
+- minimizing inter-thread synchronization
+- Efficient use of memory
 
 
 ### 主要创新点
@@ -29,13 +29,16 @@ parallelization
 
  1. 抽象出了merge matrix和merge path两个辅助分割的数据结构。具体如下图所示。
  ![merge matrix and merge path](http://img.blog.csdn.net/20170303163626353?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ1ODg2Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
- 其中，矩阵是这样构建的：若A[i] >= B[i], 则matrix[i][j] = 1, or matrix[i][j] =0;
+ 
+ 其中，矩阵是这样构建的：若A[i] >= B[i], 则matrix[i][j] = 1  or matrix[i][j] =0;
  其中，路径就是1与0的交界线（线上有一些点组成，pair（x, y）的集合）。
- 2. 在上一步构造出merge path后，每个线程平均分配任务，如，第i个线程从第j个元素开始处理，则每个线程的起始pair是这样获得的：x+y = j。 
+ 
+2.  在上一步构造出merge path后，每个线程平均分配任务，如，第i个线程从第j个元素开始处理，则每个线程的起始pair是这样获得的：x+y = j。 
  **algo：**
  ![algo](http://img.blog.csdn.net/20170303163641806?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ1ODg2Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
  **example：**
- 
+ TODO
+
 ### 实验平台及主要的实验结果
  1. 它的实验结果是多线程与单线程比的。（起始单线程效果是比串行差很多的，一方面计算对角线与mergepath交点需要开销，另一方面omp开启有开销。）
 
