@@ -19,9 +19,8 @@ title: "关于：About"
 
 ### 关于本站：
 
-* 搭建于[Github](https://github.com/LippiOuYang/LippiOuYang.github.io),欢迎Fork
-* 模板及样式来源[Useful Paradigm](http://usefulparadigm.com/)
-* 折腾开始于2014年6月1日，基本在2014年6月15日完工。
+* 搭建于[Github](https://github.com/limin2015/EZLippi.github.io),欢迎Fork
+* 搭建于2017年3月15日，3月18日正式开始更新使用。
 
 ## 其他流言
 * 喜欢JJ；
