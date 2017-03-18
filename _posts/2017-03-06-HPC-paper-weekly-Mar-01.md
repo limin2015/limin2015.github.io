@@ -1,10 +1,11 @@
-#---
+---
 layout: post
 title:  paper reading：Merge Path - Parallel Merging Made Simple
 keywords: paper-并行merge排序
 categories : [并行排序]
 tags : [负载均衡]
-#---
+---
+
 # Merge Path - Parallel Merging Made Simple
 ### 来源：2014 IPDPS
 
@@ -34,8 +35,10 @@ parallelization
  其中，路径就是1与0的交界线（线上有一些点组成，pair（x, y）的集合）。
  
 2.  在上一步构造出merge path后，每个线程平均分配任务，如，第i个线程从第j个元素开始处理，则每个线程的起始pair是这样获得的：x+y = j。 
+
  **algo：**
  ![algo](http://img.blog.csdn.net/20170303163641806?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ1ODg2Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+ 
  **example：**
  TODO
 
