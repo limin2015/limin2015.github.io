@@ -107,7 +107,7 @@ zip：
 	uname -a  //命令就是Unix Name的简写。
 
 eg：！[uname](/images/uname.png)
-
+![](/images/uname.png)
 
 ### 库相关的命令
 1. 目标代码打包成库 ：
