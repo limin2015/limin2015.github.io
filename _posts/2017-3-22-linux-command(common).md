@@ -2,11 +2,12 @@
 layout: post
 title:  paper reading：linux命令-series-1
 keywords: linux
-categories : [linux, basic]
+categories : [linux]
 tags : [linux，commond]
 ---
 
-说来也惭愧，从大四开始接触使用Linux OS，到现在仍然是一知半解，甚至有时候连装个软件都有问题。反思了下，自己 一直贯彻着现用现查的原则，没有用心理解，整理，一些东西。要是经常用还是可以，如果不经常用，有些最基本的东西，过段时间就忘啦。忘记后，再重新查，又浪费很多时间。经过深刻的反思，以后要养成良好的梳理，整理的习惯。把自己用过的东西以专题的形式记录下来，既受益于自己，说不定还能帮助到别人~~
+说来也惭愧，从大四开始接触使用Linux OS，到现在仍然是一知半解，甚至有时候连装个软件都有问题。反思了下，自己 一直贯彻着现用现查的原则，没有用心理解，整理，一些东西。要是经常用还是可以，如果不经常用，有些最基本的东西，过段时间就忘啦。忘记后，再重新查，又浪费很多时间。
+经过深刻的反思，以后要养成良好的梳理，整理的习惯。把自己用过的东西以专题的形式记录下来，既受益于自己，说不定还能帮助到别人~~
 
 ## 命令大全：
 http://man.linuxde.net/set
@@ -16,8 +17,9 @@ http://linuxtools-rst.readthedocs.io/zh_CN/latest/base/04_disk.html
 ## 我经常使用的命令
 
 ### sudo模式
-进入：sudo su
-退出：exit / logout / ctrl D
+
+	进入：sudo su
+	退出：exit / logout / ctrl D
 
 ### 查找命令
 http://www.cnblogs.com/sunleecn/archive/2011/11/01/2232210.html
@@ -31,10 +33,12 @@ whereis命令只能定位可执行文件、源代码文件、帮助文件在文�
 	whereis -b svn 找相关的二进制文件。
 	
 locate *.file: 查找是否存在此文件，存在时返回路径。（比find速度快一些）
+
 grep "SLAVE_FUN" *.h
 grep -irn "main.c" ./    //看代码的时候经常用。循环查找。
 
 type mpirun or type mpicc //查看mpirun的路径
+
 which mpicc
 eg：/usr/sw-mpp/mpi2/bin/mpicc(sw上，貌似这个mpicc是sw的编译器)
 
@@ -42,11 +46,16 @@ eg：/usr/sw-mpp/mpi2/bin/mpicc(sw上，貌似这个mpicc是sw的编译器)
 ### 文件权限命令
 
 1. 文件权限命令：r(4),w(2),x(1)
+
 sudo chmod 777 *.file  //为文件的所有用户（root，user，other）添加所有权限（读写执行）
+
 sudo chmod a+x  *.file //为文件的所有用户（root，user，other）添加执行权限
+
 相应的，r+x, u+x, o+x为分别为单个的用户添加执行权限。
 
-2.有时候 ./build.sh 不work， 因为没有加权限。一种方法是加权限-》chmod a+x build.sh，然后 ./build.sh。一种方法是sh build.sh。
+2.有时候 ./build.sh 不work， 因为没有加权限。
+一种方法是加权限-》chmod a+x build.sh，然后 ./build.sh。
+一种方法是sh build.sh。
 
 
 ### 服务器与本地（or服务器）间文件传输
@@ -78,7 +87,7 @@ zip：
 
 ### 查看系统架构等命令
 1. lscpu    //查看cpu架构
-2.  uname -a  //命令就是Unix Name的简写。显示机器名，操作系统和内核的详细信息。
+2. uname -a  //命令就是Unix Name的简写。显示机器名，操作系统和内核的详细信息。
 
 ![uname](./images/uname.png)
 
@@ -98,10 +107,9 @@ zip：
 （4）tail -f filename.txt  //显示 filename.txt文件的最后十行。且若filename.txt在动态变化，输出也会动态变化，每次都输出当前的后十行。ctrl+c可以终止显示。
 
 2. head：
-tail：
+    tail：
 （1）	tail -n 20 filename.txt //显示filename.txt文件的最后20行。-n代表读取的起始行。后面紧跟的数字若为+20,表示从文件头开始的第20行。如没有符号，或者为-20，表示从文件尾部开始的第20行。
 （2） tail -c 200 filename.txt //-c表示字节。从filename.txt文件尾部的的第200字节处，开始显示。
-
 more：  
 less：
 
