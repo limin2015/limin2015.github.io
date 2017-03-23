@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  paper reading：linux命令-series-1
+title:  linux命令-series-1
 keywords: linux
 categories : [linux]
 tags : [linux，commond]
@@ -106,7 +106,7 @@ zip：
 
 	uname -a  //命令就是Unix Name的简写。
 
-eg： ![uname](./images/uname.png)
+eg：！[uname](/images/uname.png)
 
 
 ### 库相关的命令
