@@ -1,10 +1,10 @@
-#---
+---
 layout: post
 title:  paper reading：linux命令-series-1
 keywords: linux
 categories : [linux, basic]
 tags : [linux，commond]
-#---
+---
 
 说来也惭愧，从大四开始接触使用Linux OS，到现在仍然是一知半解，甚至有时候连装个软件都有问题。反思了下，自己 一直贯彻着现用现查的原则，没有用心理解，整理，一些东西。要是经常用还是可以，如果不经常用，有些最基本的东西，过段时间就忘啦。忘记后，再重新查，又浪费很多时间。经过深刻的反思，以后要养成良好的梳理，整理的习惯。把自己用过的东西以专题的形式记录下来，既受益于自己，说不定还能帮助到别人~~
 
@@ -45,6 +45,7 @@ eg：/usr/sw-mpp/mpi2/bin/mpicc(sw上，貌似这个mpicc是sw的编译器)
 sudo chmod 777 *.file  //为文件的所有用户（root，user，other）添加所有权限（读写执行）
 sudo chmod a+x  *.file //为文件的所有用户（root，user，other）添加执行权限
 相应的，r+x, u+x, o+x为分别为单个的用户添加执行权限。
+
 2.有时候 ./build.sh 不work， 因为没有加权限。一种方法是加权限-》chmod a+x build.sh，然后 ./build.sh。一种方法是sh build.sh。
 
 
@@ -78,7 +79,9 @@ zip：
 ### 查看系统架构等命令
 1. lscpu    //查看cpu架构
 2.  uname -a  //命令就是Unix Name的简写。显示机器名，操作系统和内核的详细信息。
-./images/uname.png
+
+![uname](./images/uname.png)
+
 
 ### 库相关的命令
 1. ar -ru *.o //目标代码打包成库 
