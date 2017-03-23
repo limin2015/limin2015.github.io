@@ -31,10 +31,12 @@ parallelization
  1. 抽象出了merge matrix和merge path两个辅助分割的数据结构。具体如下图所示。
  ![merge matrix and merge path](http://img.blog.csdn.net/20170303163626353?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ1ODg2Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
  
- 其中，矩阵是这样构建的：若A[i] >= B[i], 则matrix[i][j] = 1  or matrix[i][j] =0;
+ 其中，矩阵是这样构建的：若A[i] >= B[j], 则matrix[i][j] = 1  or matrix[i][j] =0;
  其中，路径就是1与0的交界线（线上有一些点组成，pair（x, y）的集合）。
  
-2.  在上一步构造出merge path后，每个线程平均分配任务，如，第i个线程从第j个元素开始处理，则每个线程的起始pair是这样获得的：x+y = j。 
+2.  在上一步构造出merge path后，每个线程平均分配任务，如，若共有p个线程，则每个线程处理N/P个任务，第i个线程从第j（j=i*（N/P））个元素开始处理，则每个线程的起始pair是这样获得
+的：x+y = j。 所以关键问题是如何求得pair(x, y)。采用二分法来进行搜索。从所有对角线元素中，
+二分找到1与0的分界线。
 
  **algo：**
  ![algo](http://img.blog.csdn.net/20170303163641806?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ1ODg2Mw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
