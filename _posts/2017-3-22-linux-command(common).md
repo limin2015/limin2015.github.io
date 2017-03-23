@@ -117,12 +117,14 @@ zip：
 	（1）可以使用 jobs 查看后台执行的任务。
 	（2）用fg或%可以打开最后一个后台执行的任务。
 	（3）可以使用 fg %进程id 关闭后台执行的任务。
-	（4）tail -f filename.txt  //显示 filename.txt文件的最后十行。且若filename.txt在动态变化，输出也会动态变化，每次都输出当前的后十行。ctrl+c可以终止显示。
+	（4）tail -f filename.txt  
+	//显示filename.txt文件的最后十行。且若filename.txt在动态变化，输出也会动态变化，每次都输出当前的后十行。ctrl+c可以终止显示。
 
 2. head：
    tail：
-（1）tail -n 20 filename.txt //显示filename.txt文件的最后20行。-n代表读取的起始行。后面紧跟的数字若为+20,表示从文件头开始的第20行。如没有符号，或者为-20，表示从文件尾部开始的第20行。
-（2）tail -c 200 filename.txt //-c表示字节。从filename.txt文件尾部的的第200字节处，开始显示。
+
+	（1）tail -n 20 filename.txt //显示filename.txt文件的最后20行。-n代表读取的起始行。后面紧跟的数字若为+20,表示从文件头开始的第20行。如没有符号，或者为-20，表示从文件尾部开始的第20行。
+	（2）tail -c 200 filename.txt //-c表示字节。从filename.txt文件尾部的的第200字节处，开始显示。
 more：  
 less：
 
