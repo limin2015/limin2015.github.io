@@ -99,20 +99,33 @@ zip：
 	unzip -d dir myfile.zip //解压到dir目录下
 
 ### 查看系统架构等命令
-1. lscpu    //查看cpu架构
-2. uname -a  //命令就是Unix Name的简写。显示机器名，操作系统和内核的详细信息。
-![uname](./images/uname.png)
+1. 查看cpu架构
+
+	lscpu    
+2. 显示机器名，操作系统和内核的详细信息。：
+
+	uname -a  //命令就是Unix Name的简写。
+
+eg： ![uname](./images/uname.png)
 
 
 ### 库相关的命令
-1. ar -ru *.o //目标代码打包成库 
+1. 目标代码打包成库 ：
+
+	ar -ru *.o 
 2. nm -D libiomp5.a
-3. ar -t libname.a //来查看一个静态库由那些.o文件构成。
-4. ldd ./test //可以查看这个可执行文件依赖的so文件。
+
+3.来查看一个静态库由那些.o文件构成。
+
+	ar -t libname.a 
+4. 可以查看这个可执行文件依赖的so文件。
+
+	ldd ./test
 
 ##测试相关命令（提交作业等）
 1. nohup command & 。
 表示后台提交任务，执行。当退出终端时，用exit退出，nohup提交的任务还会在后台执行。输出结果在nohup.out里面。
+
 
 	（1）可以使用 jobs 查看后台执行的任务。
 	（2）用fg或%可以打开最后一个后台执行的任务。
@@ -121,10 +134,13 @@ zip：
 	//显示filename.txt文件的最后十行。且若filename.txt在动态变化，输出也会动态变化，每次都输出当前的后十行。ctrl+c可以终止显示。
 
 2. head：
+
    tail：
+
 
 	（1）tail -n 20 filename.txt //显示filename.txt文件的最后20行。-n代表读取的起始行。后面紧跟的数字若为+20,表示从文件头开始的第20行。如没有符号，或者为-20，表示从文件尾部开始的第20行。
 	（2）tail -c 200 filename.txt //-c表示字节。从filename.txt文件尾部的的第200字节处，开始显示。
+
 more：  
 less：
 
