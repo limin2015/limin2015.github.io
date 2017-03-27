@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      algorithm-series-1(array related)
+title:      algorithm-series-1.1(array related)
 keywords:   algorithm,leetcode
 category:   algorithm
 tags:		[algorithm]
