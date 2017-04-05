@@ -2,7 +2,7 @@
 layout: post
 title:  paper reading：Merge Path - Parallel Merging Made Simple
 keywords: paper-并行merge排序
-categories : [并行排序]
+categories : [paper]
 tags : [负载均衡]
 ---
 
