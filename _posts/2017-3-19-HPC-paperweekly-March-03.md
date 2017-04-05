@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  paper reading：A Novel Top-k Selecting Algorithm
+title:  paper reading：A Novel Top-k Selecting Algorithm(DC-TOP-K)
 keywords: paper-top-k
 categories : [paper]
 tags : [top-k]
 ---
 
-# DC-Top-k: A Novel Top-k Selecting Algorithm and Its Parallelization
 ## 出处：
 2016年，ICPP（华中科大）
 
