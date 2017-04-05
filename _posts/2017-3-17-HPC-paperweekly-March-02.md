@@ -6,7 +6,6 @@ categories : [paper]
 tags : [overview]
 ---
 
-# Comparison of parallel sorting algorithms
 ## 出处：
 2015年，Faculty of Computer and Information Science, University of Ljubljana, Slovenia（学校在英国排名200多名）
 

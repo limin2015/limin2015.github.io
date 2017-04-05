@@ -6,7 +6,6 @@ categories : [paper]
 tags : [负载均衡]
 ---
 
-# Merge Path - Parallel Merging Made Simple
 ### 来源：2014 IPDPS
 
 ### 解决的问题
