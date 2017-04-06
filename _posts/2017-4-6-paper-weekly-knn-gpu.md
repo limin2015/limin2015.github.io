@@ -1,5 +1,5 @@
 ---
-layout:     
+layout:     post
 title:      paper-Billion-scale similarity search with GPUs(knn-optimizaiton-gpu-1)
 keywords:   knn-optimization
 category:   paper
