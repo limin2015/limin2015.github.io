@@ -10,7 +10,7 @@ tags:       [paper]
 
 	这是Facebook AI实验室刚刚发出来的论文。关于knn算法在gpu上的优化。提出了一种用于 k-selection 的设计，其可以以高达理论峰值性能 55% 的速度进行运算，从而实现了比之前最佳的 GPU 方法快 8.5 倍的最近邻搜索。
 
-**代码**：
+## 代码：
 
 	https://github.com/facebookresearch/faiss
 
