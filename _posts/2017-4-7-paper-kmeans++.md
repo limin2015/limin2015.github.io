@@ -41,9 +41,11 @@ massively multithreaded Cray XMT platform 。并demonstrate各个平台上的sca
 ![](/images/paper/algo-1-kmeans++.png)
 
 CRAY CMT的kmeans++初始化算法如下：
+
 ![](/images/paper/algo-2-kmeans++.png)
 
 GPU的kmeans++初始化算法如下：
+
 ![](/images/paper/algo-3-kmeans++.png)
 
 
