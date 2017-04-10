@@ -34,17 +34,17 @@ massively multithreaded Cray XMT platform 。并demonstrate各个平台上的sca
 4. [17]提出了一个精确kmeans++的并行算法：它的方法，与我们的多核平台上的并行化思路很相近，同样的，leaves the final step of selecting a seed to be performed in serial. 但是这种方法只对线程数相对少的时候比较有效，在GPU和CRAY平台上，线程比较多的时候不work。so，本文，present different approaches for these platforms that are more highly parallelized。
 
 ## 主要内容：
-1. 介绍了多核（openmp）及CRAY CMT和GPU上的并行算法。
+1. 介绍了多核（openmp）及CRAY CMT和GPU上的并行算法。其中，多核是一种并行算法，后两个平台采用一种并行算法套路。
 
-其中，多核是一种并行算法，后两个平台采用一种并行算法套路。
-多核下的kmeans++初始化算法如下：
+多核下的kmeans++初始化算法如下：\\
+
 ![](/images/paper/algo-1-kmeans++.png)
 
-CRAY CMT的kmeans++初始化算法如下：
+CRAY CMT的kmeans++初始化算法如下：\\
 
 ![](/images/paper/algo-2-kmeans++.png)
 
-GPU的kmeans++初始化算法如下：
+GPU的kmeans++初始化算法如下：\\
 
 ![](/images/paper/algo-3-kmeans++.png)
 
