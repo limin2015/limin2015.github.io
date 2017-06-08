@@ -1,10 +1,11 @@
-
+---
 layout:     post
-title:      paper:swDNN:A Library for Accelerating Deep Learning Applications on
+title:      paper: swDNN:A Library for Accelerating Deep Learning Applications on
 Sunway TaihuLight
 keywords:   swDNNs
 category:   [paper]
 tags:       [paper]
+---
 
 ## 出处：
 2017年，IPDPS(CCF, B) 清华大学Haohuan Fu组
