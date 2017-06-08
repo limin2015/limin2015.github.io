@@ -9,6 +9,8 @@ tags:       [paper]
 ## 出处：
 2017年，IPDPS(CCF, B) 清华大学Haohuan Fu组
 
+代码：https://github.com/THUHPGC/swDNN
+
 ## 要解决的问题：
 
 在sw26010的4个CG（260 cores）上实现了并行的CNN的训练过程（基本的primitives）。
