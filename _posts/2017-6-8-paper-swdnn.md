@@ -63,7 +63,7 @@ C. The challenges for mapping CNN to SW26010
 （2）the following major factors that may limit the performance of CNN on SW26010：
 
 	(a)机器的计算能力，远远超过访存能力（相比GPU来说），所以，即使是计算占优的CNN，也需要好好设计访存模式来减少对内存带宽的约束；
- 	(b)The algorithm of CNN involves all-to-all connections between inputs, filter kernels, and outputs. As a result, a parallel CNN design generally requires frequent data communication among different processing elements.所以，基于寄存器通信设计良好的数据共享很重要。
+	(b)The algorithm of CNN involves all-to-all connections between inputs, filter kernels, and outputs. As a result, a parallel CNN design generally requires frequent data communication among different processing elements.所以，基于寄存器通信设计良好的数据共享很重要。
 
 D. Performance model
 
