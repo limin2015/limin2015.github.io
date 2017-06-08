@@ -49,12 +49,12 @@ B. The SW26010 Many-Core Processor:
 
 （2）sw与其他处理器不同的特征：
 
-64KB Local directive Memory (LDM) (also known as Scratch Pad Memory (SPM)) as a user-controlled fast buffer；
+	64KB Local directive Memory (LDM) (also known as Scratch Pad Memory (SPM)) as a user-controlled fast buffer；
 
-The 8 column and row communication buses enable fast register communication channels
+	The 8 column and row communication buses enable fast register communication channels
 across the 8 by 8 CPE mesh，提供过来一种CPE级数据共享的高效方式；
 
-每个CPE有2个流水线，把2条流水线用起来。identifying the right form of instruction-level parallelism can potentially resolve the dependences in the instruction sequences, and further improve the computation throughput；
+	每个CPE有2个流水线，把2条流水线用起来。identifying the right form of instruction-level 	parallelism can potentially resolve the dependences in the instruction sequences, and further improve the computation throughput；
 
 C. The challenges for mapping CNN to SW26010
 
@@ -63,7 +63,6 @@ C. The challenges for mapping CNN to SW26010
 （2）the following major factors that may limit the performance of CNN on SW26010：
 
 	(a)机器的计算能力，远远超过访存能力（相比GPU来说），所以，即使是计算占优的CNN，也需要好好设计访存模式来减少对内存带宽的约束；
-
  	(b)The algorithm of CNN involves all-to-all connections between inputs, filter kernels, and outputs. As a result, a parallel CNN design generally requires frequent data communication among different processing elements.所以，基于寄存器通信设计良好的数据共享很重要。
 
 D. Performance model
