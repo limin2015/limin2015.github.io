@@ -39,8 +39,7 @@ demonstrate影响性能的major factors；指导我们不同问题规模下，�
  (3)design of the most suitable pipelining of instructions that reduces the idling time of computation units by maximizing the overlap of memory operation instructions and computation instructions.(指令重排，充分利用双流水线)
  
 
-## 主要内容
-第三节：MAPPING CNN TO SW26010: A PERFORMANCE MODEL
+## 第三节：MAPPING CNN TO SW26010: A PERFORMANCE MODEL
 
 A. CNN简介：介绍了它的7层循环的伪代码
 
