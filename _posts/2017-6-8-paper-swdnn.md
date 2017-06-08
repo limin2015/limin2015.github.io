@@ -68,14 +68,13 @@ C. The challenges for mapping CNN to SW26010
 D. Performance model
 
 这里我没有完全看懂。
-
+TODO
 
 ## 第四节：LDM-RELATED OPTIMIZATIONS
-
+TODO
 ## 第五节：REGISTER-RELATED OPTIMIZATIONS
-
+TODO
 ##  第六节：INSTRUCTION REORDERING
-
 （这一节我看懂啦。）
 ### A. Instruction Pipelines
 对sw上的双指令流水线进行介绍，并说明双流水线对指令重排的要求：尽量的让浮点运算流水线P1上只执行浮点运算，提高计算性能，把既可以在P0，又可以在P1流水线上执行的整数运算指令放到P0上执行。（我之前也是这么做的）
