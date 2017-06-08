@@ -41,10 +41,13 @@ demonstrate影响性能的major factors；指导我们不同问题规模下，�
 
 ## 主要内容
 第三节：MAPPING CNN TO SW26010: A PERFORMANCE MODEL
+
 A. CNN简介：介绍了它的7层循环的伪代码
 
 B. The SW26010 Many-Core Processor:
+
 （1）sw的基本情况；
+
 （2）sw与其他处理器不同的特征：
 
 64KB Local directive Memory (LDM) (also known as Scratch Pad Memory (SPM)) as a user-controlled fast buffer；
@@ -65,6 +68,7 @@ C. The challenges for mapping CNN to SW26010
  	(b)The algorithm of CNN involves all-to-all connections between inputs, filter kernels, and outputs. As a result, a parallel CNN design generally requires frequent data communication among different processing elements.所以，基于寄存器通信设计良好的数据共享很重要。
 
 D. Performance model
+
 这里我没有完全看懂。
 
 
@@ -73,6 +77,7 @@ D. Performance model
 ## 第五节：REGISTER-RELATED OPTIMIZATIONS
 
 ##  第六节：INSTRUCTION REORDERING
+
 （这一节我看懂啦。）
 ### A. Instruction Pipelines
 对sw上的双指令流水线进行介绍，并说明双流水线对指令重排的要求：尽量的让浮点运算流水线P1上只执行浮点运算，提高计算性能，把既可以在P0，又可以在P1流水线上执行的整数运算指令放到P0上执行。（我之前也是这么做的）
