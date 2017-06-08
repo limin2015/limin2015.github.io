@@ -1,7 +1,6 @@
 ---
 layout:     post
-title:      paper: swDNN:A Library for Accelerating Deep Learning Applications on
-Sunway TaihuLight
+title:      swDNN:A Library for Accelerating Deep Learning Applications on Sunway TaihuLight
 keywords:   swDNNs
 category:   [paper]
 tags:       [paper]
