@@ -149,4 +149,4 @@ less：
 ### PATH，LD_LIBRARY_PATH:
 
 统计文件夹下所有文件中的c代码的行数：
-find . -name '*.c' | xargs wc -l {}\;
+find . -name '*.c' | xargs wc -l {}
