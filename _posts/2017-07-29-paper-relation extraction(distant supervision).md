@@ -58,6 +58,13 @@ tags:
 
 ## 方法介绍
 
+### Sentence Encoder
+对包含某对实体对的句子，使用词向量的方式，表示成向量。
+![](/images/NLP/RE-2.png)
+
+
+### Selective Attention over Instances
+对包含某对实体对的所有句子，采用attention机制进行选择，将最能表达这种关系的句子们挑选出来。
 
 
 ## 实验
