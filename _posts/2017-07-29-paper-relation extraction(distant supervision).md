@@ -52,15 +52,22 @@ tags:
 （3）attention机制对于2中关系抽取的神经网络模型都是管用的：CNN, PCNN。
 
 
-
-
-
-
 ## 方法介绍
 
 ### Sentence Encoder
 对包含某对实体对的句子，使用词向量的方式，表示成向量。
 ![](/images/NLP/RE-2.png)
+
+过程：
+
+1. 把一句话中的每一个字，用word2vec中的向量表示出来；把每个字距离2个实体的距离作为位置信息加入到刚刚的向量的末尾2位上。这样，每个字都有一个短向量表示；
+
+2.对上面的短向量进行Convolution, Max-pooling and Non-linear Layers的操作，生成最后的整个句子的表示。
+这个过程相当于提取每个句子的特征。
+
+我的疑问：为什么这样设计，可以提取出特征啊？？
+
+
 
 
 ### Selective Attention over Instances
