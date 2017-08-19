@@ -10,12 +10,9 @@ Softmax，sigmoid在机器学习中有非常广泛的应用，本文主要是总
 
 ## Softmax介绍
 
-
-
-
 ### 定义：
 
-softmax  is a generalization of the logistic function that "squashes" a K-dimensional vector {\displaystyle \mathbf {z} } \mathbf {z}  of arbitrary real values to a K-dimensional vector {\displaystyle \sigma (\mathbf {z} )} \sigma (\mathbf {z} ) of real values in the range [0, 1] that add up to 1. 
+softmax  is a generalization of the logistic function that "squashes" a K-dimensional vector z  of arbitrary real values to a K-dimensional vector z of real values in the range [0, 1] that add up to 1. 公式如下：
 
 ![](/images/machine-learning/softmax-1.png)
 
@@ -28,20 +25,26 @@ softmax  is a generalization of the logistic function that "squashes" a K-dimens
 
 3.把一堆实数的值映射到0-1区间，并且使他们的和为1.
 
-4.
+4.经常放在神经网络的最后一层，作为分类器。
 
-## sigmoid介绍
+## sigmoid函数介绍（等价于logistics 函数）
 
+参看“参考文献2”
+
+
+## 最大似然估计介绍（TODO）
 
 
 
 ## 总结：
-
+1.了解这些函数的原理是什么？有什么特点？（导数，函数的图等）
 
 
 
 ## 参考文献：
+
 1. https://www.zhihu.com/question/23765351(知乎)
 
-2.
+2.机器学习与NLP微信公众号：强推！！（这篇介绍的很好！！）
+http://mp.weixin.qq.com/s/jeloJDgfa3eFXUPduhesVA
 
