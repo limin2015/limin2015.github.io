@@ -101,6 +101,17 @@ http://mp.weixin.qq.com/s/ViQqeER1NXtJOtnLg76TWg
 
 
 
+## 疑问
+
+1.为什么CNN可以提取特征？想明白。
+因为训练数据是有局部特征的，
+
+
+## 补充
+1.CNN最成功的应用是CV， 为什么NLP和speech的很多问题也可以用CNN做出来？他们的相似性在哪里？
+CNN通过什么手段抓住了这个共性？为什么很多做人脸的paper会最后加入一个local connected conv?（取自wang naiyan）
+
+查看知乎收藏。
 
 
 
