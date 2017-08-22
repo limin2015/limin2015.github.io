@@ -10,9 +10,14 @@ tags:       [machine-learning-basic]
 
 ## 概念，定义
 
+
+
 ## 如何使用
+
+
 
 ## 参考文献：
 
-
+1. http://m.blog.csdn.net/itplus/article/details/26549871?utm_source=qq&utm_medium=social
+2. 李航的《统计学习方法》
 

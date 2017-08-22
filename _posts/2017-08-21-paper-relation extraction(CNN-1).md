@@ -45,9 +45,76 @@ to identify the relations between e1 and e2 (Hendrickx et al., 2010).
 
 ## 方法介绍
 
-TODO！！ 还是没有看明白！！！
+TODO
+分为** 步：
 
-1.
+### 1.Word Representation：
+
+将输入的句子中的每一个word token使用向量表示（word2vec）。
+
+### 2.提取Lexical Level Features：
+
+传统的lexical level features primarily include the nouns themselves, the types of the pairs of nominals and word sequences between the entities.
+
+而本文是这样选择的：We select the word embeddings of marked nouns and the context tokens.（词向量的表示）
+![](/images/NLP/CNN-4.png)
+
+### 3.提取Sentence Level Features：
+
+问： 上面已经提取出了每个word的向量表示，为什么还要提取句子的向量表示呢？
+
+答：single word vector models are severely limited because they do not capture long distance features and semantic compositionality, the important quality of natural language that allows humans to understand the meanings
+of a longer expression.
+
+为此，本文提出了一个最大池化的CNN去提取句子级别的表示，能够自动获取句子级别的特征。分为以下几步：
+![](/images/NLP/CNN-5.png)
+
+#### 3.1 Word Features
+
+WF的构造过程如下：以下面这句话为例，
+
+![](/images/NLP/CNN-6.png)
+当前每个word的word embedding为xi， when we take w = 3, the WF of the third word “moving”
+in the sentence S is expressed as [x2, x3, x4]. Similarly, considering the whole sentence, the WF can be
+represented as follows:{[xs, x0, x1], [x0, x1, x2], · · · , [x5, x6, xe]}5
+
+疑问：这个地方是把向量拼接起来吗？还是做累加和啊？（是前者）
+
+note：这个过程可以捕捉到单词的上下文信息。
+
+#### 3.2 Position Features
+
+把每个单词距离2个实体的距离，组成一个2维的向量作为PF。
+
+通过3.1和3.2， Combining the WF and PF, the word is represented as [WF, PF]T。这个是卷积的输入。
+
+#### 3.3 Convolution
+
+3.1， 3.2得到的word表示，只是每个句子中的每个word的局部特征。而我们的目的是要对一整句话打一个标签，判断它属于哪一个类。所以，我们需要merge这些特征。本文使用CNN进行这个操作。
+
+
+  	Z = W1X  （1）
+  	mi = max Z(i, ·) 0 ≤ i ≤ n1 （2）
+  	g = tanh(W2m)    （3）
+  	f = [l, g]      （4）
+  	o = W3f         （5）//softmax分类器
+
+具体计算过程的模拟，如下图所示：
+
+![](/images/NLP/CNN-7.jpg)
+
+![](/images/NLP/CNN-8.jpg)
+
+
+
+### 4.输出结果：
+
+输出结果是一个n维的向量，n代表总的关系类别数，每一维度的值代表当前句子属于此类的置信度值。
+
+
+### 5.Backpropagation Training
+
+![](/images/NLP/CNN-9.png)
 
 
 ## 实验
