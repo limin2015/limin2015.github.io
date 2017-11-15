@@ -18,6 +18,8 @@ http://www.docker.org.cn/book/docker/what-is-docker-16.html
 ## notes
 
 ### docker是什么？
+（1）类似沙盒的一种技术。
+（2）可以使你安装的软件不依赖于环境，然后在另一台电脑上快速使用。
 
 ### 如何安装？
 http://www.docker.org.cn/book/install/supported-platform-17.html
@@ -25,5 +27,7 @@ http://www.docker.org.cn/book/install/supported-platform-17.html
 yum和apt-get的区别
 
 ### common commands
+
+TODO
 
 

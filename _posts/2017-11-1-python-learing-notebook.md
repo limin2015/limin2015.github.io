@@ -13,3 +13,9 @@ need to arrange knowledge.
 
 
 
+## 装饰器（只看到一半，还没看完呢？）
+
+http://python.jobbole.com/81683/
+
+
+

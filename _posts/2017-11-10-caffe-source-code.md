@@ -48,11 +48,14 @@ http://blog.csdn.net/seven_first/article/details/47665817
 还没真正看懂：TODO
 
 
+
+
+
+
 ## image2col如何实现的
 
 ## pooling层
 http://blog.csdn.net/seven_first/article/details/47702403
-
 
 
 
@@ -68,7 +71,40 @@ INSTANTIATE_CLASS(BaseConvolutionLayer);
 ### 智能指针
 shared_ptr<>
 
+**什么时候使用**:
+
+
+**如何使用**：
+
+
 ### static_cast
+
+
+### 仿函数
+
+**是什么**： 
+
+仿函数(functor)，就是使一个类的使用看上去像一个函数。其实现就是类中实现一个operator()，这个类就有了类似函数的行为，就是一个仿函数类了。
+
+**什么时候使用访函数**：
+
+有些功能的的代码，会在不同的成员函数中用到，想复用这些代码。
+
+
+**用法**：
+
+我怎么感觉像是回调函数呢？？（哈哈哈）
+
+http://blog.csdn.net/tianshuai1111/article/details/7687983
+http://blog.csdn.net/yzhang6_10/article/details/51297424
+
+下面的博客写的不错：（函数指针和访函数的区别）
+
+http://blog.csdn.net/chenhaobright/article/details/17840793
+
+这两者有什么区别，既然有了函数指针， 还要函数对象干嘛。
+首先，一个类，是数据以及对数据操作的行为的集合，但是在函数指针，是无法保存数据的， 所以，函数对象比函数指针功能更强， 因为它可以保存数据，
+利用这一特性， 是函数指针无法比拟的优势。
 
 
 ### algorithm标准函数库里面的函数
