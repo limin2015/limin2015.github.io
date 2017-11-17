@@ -11,6 +11,8 @@ tags : [deep-learning]
 http://blog.csdn.net/kkk584520/article/details/41681085
 http://blog.csdn.net/seven_first?viewmode=contents
 
+这个人的博客写的不错（有空多溜溜）：
+http://blog.csdn.net/fuwenyan/article/details/72287113
 
 【路线图】
 

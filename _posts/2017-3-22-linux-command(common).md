@@ -106,6 +106,11 @@ zip：
 
 	uname -a  //命令就是Unix Name的简写。
 
+3. 查看操作系统的发型版本：（eg：CentOS version 7）：
+	
+	lsb_release -a：
+	
+
 具体每项的解释，如下图：
 ![](/images/uname.png)
 
