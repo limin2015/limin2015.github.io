@@ -26,6 +26,26 @@ TensorFlow的代码架构：
 TF的Tensor定义和运算主要是调用Eigen矩阵计算库完成的。
 
 
+学习资料的排列顺序：
+
+1.官方文档：非常好
+
+	http://www.tensorfly.cn/tfdoc/get_started/introduction.html
+
+
+TensorFlow代码解读：
+
+part-1:tensorflow笔记 ：常用函数说明
+
+	http://blog.csdn.net/u014595019/article/details/52805444
+
+
+part-2：如何添加一个新的op：
+
+	官方文档：
+	http://www.tensorfly.cn/tfdoc/how_tos/adding_an_op.html
+
+	http://blog.csdn.net/u012436149/article/details/73737299
 
 
 
