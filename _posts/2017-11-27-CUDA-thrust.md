@@ -39,6 +39,28 @@ Thrust库是一堆头文件（在CUDA-dir/thrust/目录下），使用时不需�
 g++  version.cpp  -I/soft/cuda7.5/include/thrust -o version
 
 
+# Thrust的vector容器的使用:
+
+Thrust提供了两个vector容器：host_vector 与 device_vector。顾名思义，host_vector位于主机端，device_vector位于GPU设备端。Thrust的vector容器与STL中的容器类似，是通用的容器（可以存储任何数据类型），可以动态调整大小。
+
+**code**：
+```
+
+```
+
+
+# fill、copy、sequence的用法：
+
+copy函数可以用来拷贝主机端或者设备端的数据到另外一个vector。与STL中的类似，thrust::fill用于向一段元素赋特定值。thrust::sequence可以用来生成等差数列。
+
+**code**：
+```
+
+```
+
+
+
+
 # saxpy的实现：使用transform
 
 
