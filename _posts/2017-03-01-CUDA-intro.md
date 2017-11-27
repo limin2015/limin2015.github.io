@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      CUDA的简单介绍
-keywords:   安装、基本接口、小例子
+keywords:   安装、架构介绍、常用函数库
 category:   CUDA
 tags:		[CUDA编程]
 ---
@@ -67,36 +67,13 @@ Tesla V100：（架构特征）
 
 
 
-## 例子整理（11.27整理）
 
+# gpu上的一些高性能的函数库：
 
-TODO:
+blas：
 
-1.下面的结果failed：OK
+thrust：
 
-/home/limin/CUDATrain/svm/lmblas/vectorAdd
-
-2。结果是：CUDA driver version is insufficient for CUDA runtime version: OK
-
-/home/limin/CUDATrain/svm/lmblas/dot
-
-3.下面的axpy调通：thrust和手写的，测试一下性能。
-
-/home/limin/CUDATrain/svm/lmblas
-
-4.pi的那个例子，也出现了error：OK
-
-CUDA driver version is insufficient for CUDA runtime version
-
-
-
-5.会调用blas库中的函数：scal和gemv
-
-/home/limin/CUDATrain/svm/lmblas/scal
-
-6.blas的文档：
-
-[blas-document](http://docs.nvidia.com/cuda/cublas/#examples)
-
+NPP：
 
 

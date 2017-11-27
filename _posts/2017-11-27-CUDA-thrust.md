@@ -13,7 +13,7 @@ Thrust库是一堆头文件（在CUDA-dir/thrust/目录下），使用时不需�
 
 
 
-# 查看thrust的版本低例子：version.cpp（命名成cu文件也可以）
+# 查看thrust的版本的例子：version.cpp（命名成cu文件也可以）
 
 
 **code**：
