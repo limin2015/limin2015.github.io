@@ -47,14 +47,56 @@ G80、 Maxwell 和 Pascal 5
 Fermi:
 
 Kepler:
+maxwell
+
+pascal:
 
 Tesla:
 
 Tesla:K40, K80, P4, P40 and so on.
 
+GeForce(GTX Tian):
+
+
 P40:2016年发布，专为神经网络推理，支持TensorRT。
 
 P100：
 
-最新的V100：（架构特征）
+
+Tesla V100：（架构特征）
+
+
+
+## 例子整理（11.27整理）
+
+
+TODO:
+
+1.下面的结果failed：OK
+
+/home/limin/CUDATrain/svm/lmblas/vectorAdd
+
+2。结果是：CUDA driver version is insufficient for CUDA runtime version: OK
+
+/home/limin/CUDATrain/svm/lmblas/dot
+
+3.下面的axpy调通：thrust和手写的，测试一下性能。
+
+/home/limin/CUDATrain/svm/lmblas
+
+4.pi的那个例子，也出现了error：OK
+
+CUDA driver version is insufficient for CUDA runtime version
+
+
+
+5.会调用blas库中的函数：scal和gemv
+
+/home/limin/CUDATrain/svm/lmblas/scal
+
+6.blas的文档：
+
+[blas-document](http://docs.nvidia.com/cuda/cublas/#examples)
+
+
 
