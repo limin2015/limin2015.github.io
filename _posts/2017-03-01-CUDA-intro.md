@@ -67,6 +67,46 @@ Tesla V100：（架构特征）
 
 
 
+总结（几种gpu的对比）：
+
+https://www.cnblogs.com/lijingcong/p/4958617.html
+
+http://we.poppur.com/thread-2367589-1-1.html
+
+
+
+
+## 我的127服务器
+
+### 基本信息： 
+
+是Tesla K40m" with compute capability 3.5
+
+CUDA核心数量：2880
+
+双精度浮点性能：1.43 Tflops，单精度浮点性能：4.29 Tflops（3:1）
+
+显存总容量：12GB 
+
+显存带宽: 288GB/s 支持PCI-E 3.0；  传输带宽从8GB/s（tesla k20）近乎翻番至15.75GB/s；
+
+功耗：235W热设计功耗 被动散热
+
+GPUBoost feature：其实就是可以设置clock frequency。
+
+[是什么，如何开启？](http://blog.csdn.net/gold0523/article/details/52675708)
+
+
+### 服务器上的一些命令：
+
+    qnodes //查看所有的节点信息
+    qnodes -q gpu03 //查看节点gpu03的一些信息（包括gpu占用率和显存使用量等）
+    qstat           //查看当前作业提交情况
+
+     
+
+
+
 
 # gpu上的一些高性能的函数库：
 
