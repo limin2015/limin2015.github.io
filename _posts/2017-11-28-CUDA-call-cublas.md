@@ -19,11 +19,12 @@ tags : [CUDA编程]
 
 # gemv（blas-2级）：OK
 
-矩阵本身是列优先的调用：
+矩阵本身是列优先的调用（修改的CUDA的samples中的matrixMulCUBLAS）：
 
 /home/limin/CUDATrain/svm/lmblas/gemv/gemvCublas
 
-矩阵本身是行优先的调用：
+矩阵本身是行优先的调用：（是不是必须得转置了啊？）
+
 
 
 
@@ -51,6 +52,11 @@ cublasSgemm(handle, CUBLAS_OP_N, CUBLAS_OP_N, m, n, k, &alpha, d_A, m, d_B, k, &
 看看这个例子：（加深理解）
 
 	https://www.cnblogs.com/scut-fm/p/3756242.html
+
+
+## TODO: 把blas中的gemv和gemm，测试一下，整理一个图表，看看效果如何？大约可以达到多少？（心里有数）
+
+
 
 
 

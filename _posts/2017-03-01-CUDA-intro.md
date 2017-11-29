@@ -44,9 +44,12 @@ G80、 Maxwell 和 Pascal 5
 
 ## 架构整理：TODO
 
+GTX 280：
+
 Fermi:
 
 Kepler:
+
 maxwell
 
 pascal:
@@ -74,6 +77,12 @@ https://www.cnblogs.com/lijingcong/p/4958617.html
 http://we.poppur.com/thread-2367589-1-1.html
 
 
+Fermi   - NVIDIA compute capability 2.x cards
+Kepler  - NVIDIA compute capability 3.x cards
+Maxwell - NVIDIA compute capability 5.x cards
+Pascal  - NVIDIA compute capability 6.x cards
+Volta   - NVIDIA compute capability 7.x cards
+
 
 
 ## 我的127服务器
@@ -86,7 +95,7 @@ CUDA核心数量：2880
 
 双精度浮点性能：1.43 Tflops，单精度浮点性能：4.29 Tflops（3:1）
 
-显存总容量：12GB 
+显存总容量：12GB ； share-memory：
 
 显存带宽: 288GB/s 支持PCI-E 3.0；  传输带宽从8GB/s（tesla k20）近乎翻番至15.75GB/s；
 
