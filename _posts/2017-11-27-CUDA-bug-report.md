@@ -55,6 +55,18 @@ err = cudaMemcpy(d_x, x, N, cudaMemcpyHostToDevice);
 
 
 
+# magma-gemm
+
+1.ceil（1/2） == 0，如果要想得到1，必须强制类型转换一下：ceil(1/(float)2) == 1
+
+2.#define TEXUTRE_1D打开后，出现非法访问地址的bug：
+
+如何改呢？？？（不知道呢，呜呜呜呜）
+
+
+
+
+
 
 
 

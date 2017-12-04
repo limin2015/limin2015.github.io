@@ -58,6 +58,9 @@ cublasSgemm(handle, CUBLAS_OP_N, CUBLAS_OP_N, m, n, k, &alpha, d_A, m, d_B, k, &
 
 
 
+看这个！！！
+
+Matrix computations on the GPU CUBLAS and MAGMA by example
 
 
 

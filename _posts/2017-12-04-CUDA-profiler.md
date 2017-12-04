@@ -9,7 +9,7 @@ tags : [CUDA编程]
 调优工具的使用。。。。。。
 
 
-#调优工具相关：
+# 调优工具相关：
 
 
 
@@ -26,7 +26,7 @@ Specifically, for devices with compute capability less than 2.0, the function cu
 
 
 
-## #if (__CUDA_ARCH__ >= 200)这句是什么意思：
+##  if (__CUDA_ARCH__ >= 200)这句是什么意思：
 
 
 
