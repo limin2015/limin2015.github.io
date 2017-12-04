@@ -1,10 +1,11 @@
 ---
 layout:     post
-title:      paper-GPU-ArraySort: A parallel, in-place algo for sorting large number of arrays
+title:      paper-GPU-ArraySort, A parallel, in-place algo for sorting large number of arrays
 keywords:   paper-GPU-ArraySort
 category:   [paper]
 tags:       [paper]
 ---
+
 
 ## 出处：
 2017年，ICPP
