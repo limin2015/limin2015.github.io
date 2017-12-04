@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      paper-GPU-ArraySort: A parallel, in-place algo for sorting large number of arrays
-keywords:   GPU-ArraySort
+keywords:   paper-GPU-ArraySort
 category:   [paper]
 tags:       [paper]
 ---
