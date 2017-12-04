@@ -11,7 +11,7 @@ tags : [CUDA编程]
 
 # magma-gemv
 
-把我的结果也粘过来：
+把我的结果也粘过来：TODO
 
 
 
@@ -43,6 +43,13 @@ TODO
 ![](/images/cuda/gemm-6.png)
 
 我需要画一个图，来表示，最内层分块是如何进行的（就像在sw上一样的）：
+
+## 我的测试
+
+我测试了一下cublas-gemm和magma-gemm。可是magma-gemm中的使用texture-memory那里，
+出现了illegal-memory-access的bug，还没调出来！！
+
+
 
 
 
