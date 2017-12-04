@@ -14,7 +14,7 @@ GPU作为如今主流的异构计算平台，收到越来越多的追捧，尤�
 
 （1） NVIDIA官方的faq：（比如，关于线程数如何设置等问题）
 	
-	https://developer.nvidia.com/cuda-faq
+	[NVIDIA官方的faq链接](https://developer.nvidia.com/cuda-faq)
 
 （2）gpu官网上的一些资料（easy-reading）：
 [even-easier-introduction-cuda](https://devblogs.nvidia.com/parallelforall/even-easier-introduction-cuda/)

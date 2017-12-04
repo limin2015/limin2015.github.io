@@ -15,7 +15,7 @@ tags : [CUDA编程]
 
 ## nvidia 官方文档：
 
-http://docs.nvidia.com/cuda/profiler-users-guide/index.html#axzz30ouNvjWo
+[链接](http://docs.nvidia.com/cuda/profiler-users-guide/index.html#axzz30ouNvjWo)
 
 
 ## device上可以printf吗？
