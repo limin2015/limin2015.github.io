@@ -23,7 +23,8 @@ tags : [paper]
 
 实际上是用到了改进的GEMV函数；GEM2V函数（融合函数）
 
-
+下面的这篇关于libsvm的代码解析的专栏不错：
+http://blog.csdn.net/column/details/libsvm.html
 
 
 # EM算法（最大期望算法）：查查！！！

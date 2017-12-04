@@ -34,6 +34,9 @@ m-way-merge-sort、bucket sort、sample-sort、radix sort、quick-sort、odd-eve
 
 ### the proposed algo：
 
+本文的思路：
+每一个块处理一个数组。然后每个块内部进行一个多线程的排序。本文选择的算法是sample-sort算法。
+
 
 
 ### method based on Thrust:
