@@ -46,6 +46,8 @@ G80、 Maxwell 和 Pascal 5
 
 GTX 280：
 
+Tesla:
+
 Fermi:
 
 Kepler:
@@ -54,7 +56,7 @@ maxwell
 
 pascal:
 
-Tesla:
+
 
 Tesla:K40, K80, P4, P40 and so on.
 

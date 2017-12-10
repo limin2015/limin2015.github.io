@@ -5,9 +5,10 @@ title: "关于：About"
 
 ## 个人简介：
 
-* 李敏(doctor candidate in ISCAS)
+* 李敏
 * Parallel Computing and HPC、Machine Learning
-* ISCAS 
+* doctor candidate in ISCAS
+* my paper: TODO
 
 ## 联系方式
 
@@ -17,7 +18,7 @@ title: "关于：About"
 邮箱: limin_cn#163.com (替换#为@) or limin2016@iscas.ac.cn
 </p>
 
-### 关于本站：
+## 关于本站：
 
 * 搭建于[Github](https://github.com/limin2015/EZLippi.github.io),欢迎Fork
 * 搭建于2017年3月15日，3月18日正式开始更新使用。

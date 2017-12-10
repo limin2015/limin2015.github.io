@@ -26,7 +26,6 @@ Specifically, for devices with compute capability less than 2.0, the function cu
 
 
 
-##  if (__CUDA_ARCH__ >= 200)这句是什么意思：
 
 
 
@@ -37,6 +36,10 @@ PTX:
 
 https://book.2cto.com/201409/46640.html
 
+
+
+
+杨老师，跟微软亚研薛老师的合作，您谈的怎么样了啊？
 
 
 

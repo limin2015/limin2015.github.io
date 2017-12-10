@@ -8,6 +8,16 @@ tags : [CUDA编程]
 
 记录下编程过程中遇到的bug，积累多了之后，进行归类。
 
+## 方法论
+
+### 分享别人的一篇关于cuda调试bug的方法总结：
+
+http://blog.csdn.net/litdaguang/article/details/50462325
+
+### gpu-gdb的使用：
+
+
+
 ## axpy
 
 目录：/home/limin/CUDATrain/svm/lmblas/axpy （实验室的gpu服务器）
