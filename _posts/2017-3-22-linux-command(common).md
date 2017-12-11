@@ -155,3 +155,13 @@ less：
 
 统计文件夹下所有文件中的c代码的行数：
 find . -name '*.c' | xargs wc -l {}
+
+
+
+### shell的区块注释
+
+https://www.cnblogs.com/emanlee/p/3749911.html
+
+	:<<eof
+	被注释的多行内容 
+	eof
