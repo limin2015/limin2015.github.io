@@ -8,18 +8,53 @@ tags : [paper]
 
 调研一下哪些机器学习算法会调用blas数学库中的函数，如何用的？
 
-# 聚类算法： kmeans
+调研一下机器学习的库都有哪些：
+
+
+
+# 已有的机器学习库调研：
+
+scikit-learn: python的库。使用方便，但是性能一般。
+
+mlpack：c++的库，支持多线程（如何多线程的？）
+
+
+benchmark： a modest consumer-grade workstation containing an AMD Phenom II X6 1100T processor clocked at 3.3 GHz and 8 GB of RAM.
+
+	knn（k=3）性能如下图：
+
+	！[](/images/paper/ml-servey-mlpack-knn.png)
+
+	kmeans性能如下图：
+	 ！[](/images/paper/ml-servey-mlpack-kmeans.png
+
+	 	
+
+opencv：c++的库，支持多线程（**），支持gpu（**）。主要用于图像处理相关算法，但包含机器学习的一些算法。
+
+matlab：我没用过，需要看一番！！
+
+Shogun：
+
+	http://www.shogun-toolbox.org/
+
+
+
+# 机器学习算法的实现方法调研
+
+
+## 聚类算法： kmeans
 
 这个我做了：要么使用改进的gemv，要么使用改进的gemm；
 
 
-# 分类算法： knn
+## 分类算法： knn
 
 实际上是用到了一个距离矩阵的求解（类GEMM操作）；
 
 
 
-# SVM算法
+## SVM算法
 
 实际上是用到了改进的GEMV函数；GEM2V函数（融合函数）
 
@@ -27,18 +62,18 @@ tags : [paper]
 http://blog.csdn.net/column/details/libsvm.html
 
 
-# EM算法（最大期望算法）：查查！！！
+## EM算法（最大期望算法）：查查！！！
 
 
-# PageRank算法：看看！！
+## PageRank算法：看看！！
 
 
-# 其他的：（查一查，看看是如何使用的）
+## 其他的：（查一查，看看是如何使用的）
 
 KL变换、条件随机场、随机游走模型（宽平稳）、马尔科夫随机场，贝叶斯；
 
 
-# 深度学习算法：如CNN、RNN等；
+## 深度学习算法：如CNN、RNN等；
 
 caffe中的卷积使用的是：img2col+gemm;
 还有一种卷积计算方法，使用FFT；
