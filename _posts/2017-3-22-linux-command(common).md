@@ -165,3 +165,18 @@ https://www.cnblogs.com/emanlee/p/3749911.html
 	:<<eof
 	被注释的多行内容 
 	eof
+
+
+### Vim 复制粘帖格式错乱问题的解决办法
+
+https://www.cnblogs.com/jianyungsun/archive/2012/07/31/2616671.html
+
+运行如下命令，进入 paste 模式：
+
+	:set paste
+
+进入 paste 模式后，按 i 键进入插入模式，然后再粘帖，文本格式不会错乱了。但粘帖后还需要按 <ESC> 进入普通模式并执行如下命令结束 paste 模式：
+
+	:set nopaste
+
+显然，这样非常麻烦。下面我们进行改进。
