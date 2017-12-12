@@ -1,12 +1,9 @@
 ---
-title: 
-date: 2017-12-12: where to go
 layout: post
-categories:
-  - life
-tags:
-  - Life
-  - 生活
+title:  where to go
+keywords:life
+categories : life
+tags : Life
 ---
 
 上午找马老师讨论了一下reviewer的意见，突然就不知道自己该怎么做了。心里难受的不行。
