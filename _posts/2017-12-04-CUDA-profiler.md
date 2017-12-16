@@ -29,7 +29,14 @@ Specifically, for devices with compute capability less than 2.0, the function cu
 
 
 
-##  nvprof和nvvp（可产生sass代码）
+##  nvprof 和 nvvp（可产生sass代码）
+
+
+gprof:
+
+http://blog.csdn.net/stanjiang2010/article/details/5655143
+
+疑问：可以采集cuda程序的性能参数吗？（i am afraid not.）
 
 
 PTX:

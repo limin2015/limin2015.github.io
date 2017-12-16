@@ -180,3 +180,12 @@ https://www.cnblogs.com/jianyungsun/archive/2012/07/31/2616671.html
 	:set nopaste
 
 显然，这样非常麻烦。下面我们进行改进。
+
+
+## 查一个bin可执行文件的path在哪里的命令：
+
+
+## linux中uptime命令查看linux系统负载：
+
+
+![](/images/linux/uptime-command.png)

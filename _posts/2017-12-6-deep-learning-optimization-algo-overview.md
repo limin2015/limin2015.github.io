@@ -18,6 +18,9 @@ tags:       [machine-learning-basic]
 
 
 
+## 分布式深度学习：
+
+https://blog.skymind.ai/distributed-deep-learning-part-1-an-introduction-to-distributed-training-of-neural-networks/
+
+
 ## 
-
-

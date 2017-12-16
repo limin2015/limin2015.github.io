@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      paper-on optimizaing machine learning workloads via kernel fusion
+title:      paper-optimizaing machine learning workloads via kernel fusion
 keywords:   paper-
 category:   [paper]
 tags:       [paper]
