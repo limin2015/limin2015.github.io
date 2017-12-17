@@ -40,6 +40,10 @@ massively multithreaded Cray XMT platform 。并demonstrate各个平台上的sca
 
 1. 介绍了多核（openmp）及CRAY CMT和GPU上的并行算法。其中，多核是一种并行算法，后两个平台采用一种并行算法套路。
 
+串行的kmeans++初始化算法如下：\\
+
+![](/images/paper/algo-serial-kmeans++.png)
+
 多核下的kmeans++初始化算法如下：\\
 
 ![](/images/paper/algo-1-kmeans++.png)
