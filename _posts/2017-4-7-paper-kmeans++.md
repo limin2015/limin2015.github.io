@@ -11,6 +11,7 @@ tags:       [paper]
 
 ## 要解决的问题：
 
+
 1. 之前的工作只关注近似kmeans++的并行化，本文提出了一个精确kmeans++求解的并行化算法，
 并给出了正确性证明。
 2. kmeans++算法包括初始化选取和聚类2部分。本文只并行化了中心点初始化这个kernel。因为后者已经被优化的比较多啦。初始化步骤没有被优化过，在并行环境下，它成为了性能瓶颈（相比优化后的聚类操作）。
@@ -59,7 +60,9 @@ GPU的kmeans++初始化算法如下：\\
 
 2.针对不同的n，m，k，以及测试出来的运行时间，在各个平台上，建立线性回归模型，学习参数。这样就可以预测任意一个数据规模下，在各个平台上的运行时间。并对预测的正确率进行了评估。（平方根误差）
 
-3.建立了一个可视化工具： kmvis。可视化的目的是：indicate which platform would compute the k-means++ initialization the quickest given a particular input size of n and m, and number of clusters k.
+3.建立了一个可视化工具： kmvis。可视化的目的是：indicate which
+ platform would compute the k-means++ initialization the quickest given a particular input size of n and m, and number of clusters k.
+
 这个工具也可以用于其他算法，在不同平台上的表现对比（升华）。
 这个工具其实就是类似于matplot的画图的工具。它画出的图，横轴代表m，纵轴代表n，然后k是单独的，一个固定的k，一个图。然后在某个坐标规模下，哪个平台上运行的最快，就涂上相应平台的颜色。画出的图如下：\\
 
@@ -111,7 +114,8 @@ GPU的kmeans++初始化算法如下：\\
 
 1. 本文将统计模型用于高性能分析之中，这个点子不错。（研一上课，体系结构老师提过，现在做出这种结合的论文不多，学习借鉴）。
 
-2. openmp的并行化那个算法很值得学习，证明部分我还没有看。GPU平行的思路感觉不是最优的，有很大的提升空间。
+2. openmp的并行化那个算法很值得学习，证明部分我还没有看。GPU并行的思路感觉不是最优的，有很大的提升空间。
+我写了两个改进的并行算法（在纸质论文上），仔细想想，是不是更优，先从理论上来看(有点晕了的！！)。
 
 3. 本文测试时，维度比较大时，好像讲的不是很清晰，搪塞带过啦。
 
