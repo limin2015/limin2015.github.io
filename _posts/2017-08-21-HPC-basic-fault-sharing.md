@@ -20,9 +20,8 @@ tags:
 
 
 
-# 几个基本定理：amdahl, gustafson, sun and ni's law
 
-[basic-parallel-principle](https://wenku.baidu.com/view/7da92aa70029bd64783e2c85.html)
+
 
 
 ## 引用：

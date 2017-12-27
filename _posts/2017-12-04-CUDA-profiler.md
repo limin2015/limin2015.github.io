@@ -59,6 +59,28 @@ ptxas info : Used 4 registers, 60+56 bytes lmem, 44+40 bytes smem, 20 bytes cmem
 
 
 
+## 常见bug和解决方案
+
+
+本部分整理自《CUDA并行程序设计 GPU编程指南》
+
+1.cudaDevideSynchronize()函数用于同步，一个API调用完成后，使用此函数，使得该API结束后才执行下面的程序。
+
+2.线程块的大小，计算时：
+
+	int num_blocks = (num_elements + num_threads - 1)/num_threads; //需要向上取整。
+
+然后在内核函数中，为了防止数组被越界访问，需要加上一个判断：
+
+	if(tid < num_element){
+		...
+	}
+
+3.host上的内存指针，和设备上的内存指针，要分清楚，malloc和free，及函数调用时，都不要写错了的。
+
+4.
+
+
 
 
 
