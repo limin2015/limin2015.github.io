@@ -24,4 +24,7 @@ tags:       [machine-learning-basic]
 
 # 一些好的博客收集：
 
-http://blog.csdn.net/xbinworld/article/details/44276389
+[机器学习方法：回归（二）：稀疏与正则约束ridge regression，Lasso](http://blog.csdn.net/xbinworld/article/details/44276389)
+
+[每日算法](http://blog.csdn.net/column/details/algorithmeveryday.html)
+
