@@ -18,3 +18,10 @@ tags:       [machine-learning-basic]
 
 
 学习机器学习的算法的进度是这样的：应用 -》理论 -》实现。
+
+
+
+
+# 一些好的博客收集：
+
+http://blog.csdn.net/xbinworld/article/details/44276389
