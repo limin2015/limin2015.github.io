@@ -199,3 +199,10 @@ diff file_1 file_2
 -B：忽略空行造成的不同
 
 [如何查看diff的结果](http://www.ruanyifeng.com/blog/2012/08/how_to_read_diff.html)
+
+
+## set -e
+
+告诉bash，若执行脚本的过程中，有error，则退出。
+
+
