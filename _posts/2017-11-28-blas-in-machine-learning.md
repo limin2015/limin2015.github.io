@@ -8,6 +8,8 @@ tags : [paper]
 
 调研一下哪些机器学习算法会调用blas数学库中的函数，如何用的？
 
+分析，总结一下深度学习（cnn和rnn）中的operator的计算模式：
+
 调研一下机器学习的库都有哪些：
 
 
@@ -67,6 +69,9 @@ http://blog.csdn.net/column/details/libsvm.html
 
 ## PageRank算法：看看！！
 
+注：cuda8.0中的sample中有一个例子。（还有一个sssp（单源最短路径的）的例子）。
+
+
 
 ## 其他的：（查一查，看看是如何使用的）
 
@@ -76,26 +81,40 @@ KL变换、条件随机场、随机游走模型（宽平稳）、马尔科夫随
 ## 深度学习算法：如CNN、RNN等；
 
 caffe中的卷积使用的是：img2col+gemm;
-还有一种卷积计算方法，使用FFT；
+还有一种卷积计算方法，使用FFT(winograd)（nnpack中）；
+还有一种：direct compute(mkl-dnn中或者ncnn中);
 
 
-总结：（深度学习框架中用到的blas函数有哪些）
+
+# 总结：（分析深度学习框架中的operator的计算模式）
 
 卷积层->pool层->sigmoid->relu->softmax->全连接层（or inner_product层）
 ->batch-normalization->tanh->lstm->lrn->img2col->drop-out
 
 挨个看看，每个是大体如何实现的(caffe为例)：
 
-全连接层：调用的gemv或者gemm，根据参数的值，选择的（需要看看）（forward和backward）
+**全连接层**：调用的gemv或者gemm，根据参数的值，选择的（需要看看）（forward和backward）
 
-卷积层： img2col + gemm;或者cudnnGetConvolutionForwardAlgorithm（调用cudnn中的算法）
+**卷积层**： img2col + gemm;或者cudnnGetConvolutionForwardAlgorithm（调用cudnn中的算法）
+
+**lstm**: gemm and element-wise operators（to be more detailed!!） 
 
 
-pooling层：
+**pooling层**：
 
 
-scal：
-sum：
+**sigmoid**:
+
+**relu**: max(0, x);
+
+**tanh**:
+
+**softmax**:
+
+
+**scal**：
+
+**sum**：
 
 
 

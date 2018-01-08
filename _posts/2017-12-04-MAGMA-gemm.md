@@ -9,6 +9,10 @@ tags : [CUDA编程]
 介绍magma库中的gemv和gemm的实现。参考magma的源代码，和相应的论文
 
 
+
+
+
+
 # magma-gemv
 
 把我的结果也粘过来：TODO
@@ -62,6 +66,17 @@ TODO
 [An Improved MAGMA GEMM for Fermi GPUs](http://www.netlib.org/lapack/lawnspdf/lawn227)
 
 
+# 其他关于gemm的资料
+
+
+## github上一个gemm在cpu上的实现
+
+[how-to-optimize-gemm](https://github.com/limin2015/how-to-optimize-gemm)
+
+
+## sw26010上的gemm的优化
+
+[jiang'sgemm](参考师姐的论文)
 
 
 

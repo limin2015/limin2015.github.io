@@ -1,5 +1,5 @@
 ---
-title: 1-6日的笔记（会删除）
+title: 1月6日的笔记（会删除）
 layout: post
 categories:
   - life
@@ -45,12 +45,30 @@ http://graphics.cs.cmu.edu/projects/halidesched/
 "XLA: TensorFlow Compiled!",https://www.youtube.com/watch?v=kAOanJczHA0
 
 
+
+
+[教程 | 谷歌官博详解XLA：可在保留TensorFlow灵活性的同时提升效率](http://www.sohu.com/a/128440204_465975)
+
+XLA 使用 JIT 编译技术来分析用户在运行时（runtime）创建的 TensorFlow 图，专门用于实际运行时的维度和类型，它将多个 op 融合在一起并为它们形成高效的本地机器代码——能用于 CPU、GPU 和自定义加速器（例如谷歌的 TPU）。
+
+ TensorFlow 如何利用 XLA、JIT、AOT 和其它编译技术来最小化执行时间并最大限度地利用计算资源。
+
+
+ 我的总结：
+ 
+ 1.我感觉XLA跟msra-sys实现的kf有点相似。
+ 2.没有详细说明技术细节：运行了JIT，AOT技术。
+
+
+
 # 其他的系统：
 
 Intel’s NGraph（如下图），HP的Cognitive Computing Toolkit (CCT)， IBM的SystemML
 
 
+intel-nervana：
 
+[/intel-nervana-graph](https://ai.intel.com/intel-nervana-graph-preview-release/)
 
 
 
@@ -78,3 +96,17 @@ gcc：
 clang：
 
 llvm：
+
+
+
+# lstm的串行代码，计算模式分析
+
+https://www.jianshu.com/p/4b4701beba92
+
+https://www.jianshu.com/p/2aca6e8ac7c8
+
+
+
+
+
+
