@@ -97,16 +97,25 @@ clang：
 
 llvm：
 
+按照下面的教程走一波：
 
-
-# lstm的串行代码，计算模式分析
-
-https://www.jianshu.com/p/4b4701beba92
-
-https://www.jianshu.com/p/2aca6e8ac7c8
+http://llvm.org/docs/tutorial/
 
 
 
+# c++的学习
 
+Effective Modern C++：
+
+https://zhuanlan.zhihu.com/p/21102748
+
+
+
+
+
+
+一个搞机器学习的人的blog：
+
+http://colah.github.io/about.html
 
 
