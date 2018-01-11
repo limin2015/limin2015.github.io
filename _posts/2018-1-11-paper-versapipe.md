@@ -64,6 +64,8 @@ In the persistent thread technique, the kernel creates a number of threads that 
 
 cess a data item in a pipeline stage) of a GPU kerenl to the GPU SMs. It is through transforming the kernel code such that each GPU thread decides which tasks to process based on the ID of the SM on which the thread runs. More specifically, it uses a method called SM-based task selection to guarantee task execution is based on a specific SM and enable the binding between tasks and SMs, and uses a filling-retreating scheme to offer a flexible control of the amount of active threads on an SM.
 
+
+
 ## dynamic parallelism：
 
 Dynamic Parallelism (DP) allows threads running on GPUto launch subkernels。
