@@ -103,29 +103,27 @@ achieved_occupancy参数：每个sm在每个cycle能够达到的最大activewarp
 
 	结果如下：
 
-		Invocations   Metric Name                             Metric Description         Min         Max         Avg
-		Device "GeForce GTX 1080 (0)"
-		Kernel: void gemvKernel<int=16, int=32>(float*, float*, float*, float*, int, int)
-		602   inst_per_warp                                      Instructions per warp  181.000000  181.000000  181.000000
-		602   branch_efficiency                                   Branch Efficiency     100.00%     100.00%     100.00%
-		602 warp_execution_efficiency                           Warp Execution Efficiency      54.94%      54.94%      54.94%
-		602 warp_nonpred_execution_efficiency    Warp Non-Predicated Execution Efficiency      53.04%      53.04%      53.04%
-		602     inst_replay_overhead                        Instruction Replay Overhead    0.011050    0.021754    0.011068
-		602  shared_load_transactions_per_request Shared Memory Load Transactions Per Request  1.000000  1.000000    1.000000
-		602  shared_store_transactions_per_requestShared Memory Store Transactions Per Request 1.000000  1.000000    1.000000
-		602  local_load_transactions_per_request  Local Memory Load Transactions Per Request 0.000000    0.000000    0.000000
-		602 local_store_transactions_per_request  Local Memory Store Transactions Per Request 0.000000   0.000000    0.000000
-		602  gld_transactions_per_request           Global Load Transactions Per Request    8.000000    8.000000    8.000000
-		602 gst_transactions_per_request            Global Store Transactions Per Request    1.000000    1.000000    1.000000
-		602 shared_store_transactions                           Shared Store Transactions         272         272         272
-		602  shared_load_transactions                           Shared Load Transactions         288         288         288
-		602   local_load_transactions                             Local Load Transactions           0           0           0
-		602  local_store_transactions                            Local Store Transactions           0           0           0
-		602    gld_transactions                                  Global Load Transactions        1024        1024        1024
-		602         gst_transactions                           Global Store Transactions          16          16          16
-		602   sysmem_read_transactions                    System Memory Read Transactions           0           0           0
-		602   sysmem_write_transactions                  System Memory Write Transactions           5           5           5
-		602      l2_read_transactions                                L2 Read Transactions         400         488         426
+		Metric Name         Metric Description    Min   Max    Avg
+	    inst_per_warp            Instructions per warp  181.000000  181.000000  181.000000
+	    branch_efficiency        Branch Efficiency     100.00%   100.00%   100.00%
+		warp_execution_efficiency  Warp Execution Efficiency  54.94%   54.94%   54.94%
+	    warp_nonpred_execution_efficiency Warp Non-Predicated Execution Efficiency 53.04% 53.04% 53.04%
+		inst_replay_overhead   Instruction Replay Overhead    0.011050    0.021754    0.011068
+		shared_load_transactions_per_request Shared Memory Load Transactions Per Request  1  1   1
+		shared_store_transactions_per_requestShared Memory Store Transactions Per Request 1.  1.   1
+		local_load_transactions_per_request  Local Memory Load Transactions Per Request 0.   0.0    0.
+		local_store_transactions_per_request  Local Memory Store Transactions Per Request 0.   0.0    0.
+		gld_transactions_per_request  Global Load Transactions Per Request    8.    8.    8.
+		gst_transactions_per_request   Global Store Transactions Per Request    1.   1.    1.
+		shared_store_transactions   Shared Store Transactions  272   272  272
+		shared_load_transactions   Shared Load Transactions    288   288   288
+		local_load_transactions   Local Load Transactions      0    0  0
+		local_store_transactions  Local Store Transactions      0    0    0
+		gld_transactions   Global Load Transactions    1024  1024 1024
+		gst_transactions  Global Store Transactions    16    16     16
+		sysmem_read_transactions   System Memory Read Transactions  0   0    0
+		sysmem_write_transactions System Memory Write Transactions 5   5     5
+		 l2_read_transactions    L2 Read Transactions  400   488  426
 		602      l2_write_transactions                              L2 Write Transactions          29          29          29
 		602           global_hit_rate                                     Global Hit Rate      62.50%      62.50%      62.50%
 		602             local_hit_rate                                     Local Hit Rate       0.00%       0.00%       0.00%
