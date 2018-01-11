@@ -206,3 +206,5 @@ diff file_1 file_2
 告诉bash，若执行脚本的过程中，有error，则退出。
 
 
+### shell写for循环，测试时使用
+
