@@ -6,16 +6,16 @@ categories : [deep-learning]
 tags : [deep-learning]
 ---
 
-## 路线图
+# 路线图
 
-如何看TensorFlow源代码？
+ ##如何看TensorFlow源代码？
 
 
 
 	https://www.zhihu.com/question/41667903?from=profile_question_card
 
 
-TensorFlow的代码架构：
+## TensorFlow的代码架构：
 
 
 	http://www.linuxidc.com/Linux/2016-07/133215.htm
@@ -26,9 +26,9 @@ TensorFlow的代码架构：
 TF的Tensor定义和运算主要是调用Eigen矩阵计算库完成的。
 
 
-学习资料的排列顺序：
+##学习资料的排列顺序：
 
-1.官方文档：非常好
+1. 官方文档：非常好
 
 	http://www.tensorfly.cn/tfdoc/get_started/introduction.html
 
@@ -48,7 +48,9 @@ part-2：如何添加一个新的op：
 	http://blog.csdn.net/u012436149/article/details/73737299
 
 
+2.  卜居写的TensorFlow的博客：
 
+http://blog.csdn.net/kkk584520
 
 
 
