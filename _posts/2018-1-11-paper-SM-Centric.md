@@ -16,25 +16,25 @@ tags:       [paper]
 
 
 
-# 1.出处：
+# 1. 出处：
 
 BoWu 的 PACT’14的短文，和ICS’15的长文
 
 
 
-# persistent thread存在的问题
+# 2. persistent thread存在的问题
 
 - The first limitation comes from the randomness in the hard- ware scheduler. Our experiments showed that the schedul- ing is not round-robin, contrary to common perception, and does not guarantee an even distribution of thread blocks, even if the number of thread blocks is small. Hence, persistent threads may underutilize hardware resource if some SMs obtain less thread blocks than others.
 
 - persistent threads has no support for deciding on which SM a task should run, which is important for some optimizations of locality enhancement.
 
 
-# 2. main methods:
+# 3. main methods:
 
 本文解决了persistent thread存在的2个问题，主要用到的方法是：**SM-centric task selection** and a **filling-retreating scheme**.
 
 
-## 2.1 SM-Centric Task Selection
+## 3.1 SM-Centric Task Selection
 
 原有的方法是怎样的：
 
@@ -51,7 +51,7 @@ Therefore, for this idea to work, the number of workers scheduled by an SM shoul
 那么，如何解决这个问题呢？设置一个count，在每个SM上数一下，目前在这个SM上运行的block的个数，若超过了2，则啥也不做。这样就能保证每个SM上被分配到2个block。（下面的filling-retreating scheme即使这种方法！！）
 
 
-## 2.2 filling-retreating scheme
+## 3.2 filling-retreating scheme
 
 The basic idea is to maintain a fixed number (usually small) of workers on each SM, which process all jobs in the corresponding queue. By analyzing and characterizing the GPU kernel at runtime, we determine **the maximum number of active thread blocks on each SM, denoted as M**. 
 
