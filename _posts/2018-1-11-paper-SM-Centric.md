@@ -24,9 +24,9 @@ BoWu 的 PACT’14的短文，和ICS’15的长文
 
 # persistent thread存在的问题
 
-- 1. The first limitation comes from the randomness in the hard- ware scheduler. Our experiments showed that the schedul- ing is not round-robin, contrary to common perception, and does not guarantee an even distribution of thread blocks, even if the number of thread blocks is small. Hence, persistent threads may underutilize hardware resource if some SMs obtain less thread blocks than others.
+- The first limitation comes from the randomness in the hard- ware scheduler. Our experiments showed that the schedul- ing is not round-robin, contrary to common perception, and does not guarantee an even distribution of thread blocks, even if the number of thread blocks is small. Hence, persistent threads may underutilize hardware resource if some SMs obtain less thread blocks than others.
 
-- 2. persistent threads has no support for deciding on which SM a task should run, which is important for some optimizations of locality enhancement.
+- persistent threads has no support for deciding on which SM a task should run, which is important for some optimizations of locality enhancement.
 
 
 # main methods:
@@ -36,8 +36,11 @@ BoWu 的 PACT’14的短文，和ICS’15的长文
 
 ## SM-Centric Task Selection
 
+原有的方法是怎样的：
+
 The GPU threads are grouped into thread blocks (the workers),（note：这里的worker代表软件层面的block，job代表要程序要处理的task） each processing a job. Usually, the programmer builds the mapping between jobs and workers, as shown in Figure 1 (a). Since the workers are arbitrarily scheduled to SMs, the mapping between jobs and SMs is also arbitrary（这种方式是最普通的方式）. Persistent threads, as illustrated in Figure 1 (b), maintains a global job queue. The workers grab jobs from the queue once they are idle. As such, persistent threads can map jobs to workers(这种方式类似于我在神威上的：fetch_add方式的动态任务调度). However, the thread block’s placement on SM is controlled by hardware, so is the binding between tasks and SMs. 
 
+本文的方法：
 
 The SM-centric task selection  **breaks the binding between workers and jobs, but maps jobs to SMs instead**. 
 （这种方式：类似我的想法：SM内部可以做好几个任务。它抽象了以下！！）
