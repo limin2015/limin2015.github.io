@@ -10,13 +10,13 @@ tags:       [paper]
 
 本文是对于以下2篇文章的总结：（第一篇文章的写作太好了，学习！！）
 
-**1. SM-Centric Transformation, Circumventing Hardware Restrictions for Flexible GPU Scheduling**
+ - **SM-Centric Transformation, Circumventing Hardware Restrictions for Flexible GPU Scheduling**
 
-**2. Enabling and Exploiting Flexible Task Assignment on GPU through SM-Centric Program Transformations**
+- **Enabling and Exploiting Flexible Task Assignment on GPU through SM-Centric Program Transformations**
 
 
 
-# 出处：
+# 1.出处：
 
 BoWu 的 PACT’14的短文，和ICS’15的长文
 
@@ -29,12 +29,12 @@ BoWu 的 PACT’14的短文，和ICS’15的长文
 - persistent threads has no support for deciding on which SM a task should run, which is important for some optimizations of locality enhancement.
 
 
-# main methods:
+# 2. main methods:
 
 本文解决了persistent thread存在的2个问题，主要用到的方法是：**SM-centric task selection** and a **filling-retreating scheme**.
 
 
-## SM-Centric Task Selection
+## 2.1 SM-Centric Task Selection
 
 原有的方法是怎样的：
 
@@ -51,7 +51,7 @@ Therefore, for this idea to work, the number of workers scheduled by an SM shoul
 那么，如何解决这个问题呢？设置一个count，在每个SM上数一下，目前在这个SM上运行的block的个数，若超过了2，则啥也不做。这样就能保证每个SM上被分配到2个block。（下面的filling-retreating scheme即使这种方法！！）
 
 
-## filling-retreating scheme
+## 2.2 filling-retreating scheme
 
 The basic idea is to maintain a fixed number (usually small) of workers on each SM, which process all jobs in the corresponding queue. By analyzing and characterizing the GPU kernel at runtime, we determine **the maximum number of active thread blocks on each SM, denoted as M**. 
 
