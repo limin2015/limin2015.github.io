@@ -208,3 +208,11 @@ diff file_1 file_2
 
 ### shell写for循环，测试时使用
 
+
+
+
+## 查看系统中是否定义了某个环境变量
+
+eg：看是否定义了“P4”变量
+
+gcc -posix -dM -E -</dev/null | grep "P4"
