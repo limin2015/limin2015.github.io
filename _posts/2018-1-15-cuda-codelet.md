@@ -27,7 +27,8 @@ tags:		[CUDA编程]
              
                     if (block_x == 0){
                             if (thread_index_inBlock < BLOCK_NUM){
-                                while (global_state_in[thread_index_inBlock] != 1){};
+                                while (global_state_in[thread_index_inBlock] != 1)
+                                    {};
                              }
              
                          __syncthreads();

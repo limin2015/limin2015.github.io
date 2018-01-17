@@ -6,6 +6,10 @@ categories : [deep-learning]
 tags : [deep-learning]
 ---
 
+学习TensorFlow，阅读源码。
+
+
+
 # 路线图
 
  ##如何看TensorFlow源代码？

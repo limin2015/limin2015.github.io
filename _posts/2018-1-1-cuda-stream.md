@@ -7,7 +7,7 @@ tags:		[CUDA编程]
 ---
 
 
-
+介绍cuda stream技术。
 
 
 # 单个stream的情况
@@ -54,7 +54,9 @@ http://blog.163.com/wujiaxing009@126/blog/static/71988399201712035958365/
 
    **hyper-Q**可以用来解决上面提到的伪依赖问题。
 
-2. 多个stream中的多个操作，到底是如何调度的？？
+
+
+2. 多个stream中的多个操作，到底是重叠的（**重叠行为分析**）？？
 
 (1) 在下面的页面搜索：Overlapping Behavior
 
@@ -92,7 +94,8 @@ http://blog.163.com/wujiaxing009@126/blog/static/71988399201712035958365/
         （a）这个代码，若支持Overlap of Data Transfer and Kernel Execution，则，传1和算0是overlap的，算1和传回0是overlap的；
         （b）若支持concurrent kernel execution，则，算0和算1也会重叠一部分（咋重叠？？）
 
-（3）在判断哪些能够overlap时候，还有一些隐式同步的限制：TODO(我没有看懂！！)
+
+3. 在判断哪些能够overlap时候，还有一些**隐式同步**的限制：**TODO**(我没有看懂！！)
 
     ![](/images/cuda/stream-1.png)
 
@@ -101,6 +104,8 @@ http://blog.163.com/wujiaxing009@126/blog/static/71988399201712035958365/
 
 
 #  cublas中的gemm是不是不支持stream啊？因为没有提供stream这个参数
+
+支持。
 
 [can be solved by call a routine](http://docs.nvidia.com/cuda/cublas/#parallelism-with-streams)
 

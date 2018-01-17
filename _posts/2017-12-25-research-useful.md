@@ -41,7 +41,23 @@ ref:
 [Karthikeyan Natarajan](https://lxkarthi.github.io/)
 
 
+Xipeng Shen实验室做的特别广泛，hpc和nlp相关的，机器学习算法相关的，gpu调度相关的：
+
+[Xipeng Shen](https://people.engr.ncsu.edu/xshen5/)
+
+回头下载这篇文章读一读：
+
+[ICDE'18]"Reuse-Centric K-Means Configuration", Hui Guan, Yufei Ding, Xipeng Shen, Hamid Krim, The annual IEEE International Conference on Data Engineering, Paris, France, April 16-20, 2018. (short paper) [To appear]
+
+
+
 ## ML相关的
+
+
+## 目标检测，计算机视觉相关的
+
+1. 提出fast-rcnn等目标检测算法的大神：
+[rbg](http://www.rossgirshick.info/)
 
 
 

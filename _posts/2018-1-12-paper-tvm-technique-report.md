@@ -6,7 +6,7 @@ category:   [paper]
 tags:       [paper]
 ---
 
-总结一下tvm的paper。
+总结一下陈天奇团队的tvm的paper。
 
 
 

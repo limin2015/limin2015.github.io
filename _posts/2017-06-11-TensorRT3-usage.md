@@ -6,7 +6,7 @@ categories : [CUDA]
 tags : [CUDA编程]
 ---
 
-TensorRT框架是NVIDIA专为推理做的一个高性能的库。不开源。自TensorRT3版本开始绑定python接口（INT8精度的没有python接口），之前的版本只支持C++调用。
+TensorRT框架是NVIDIA专为推理做的一个高性能的库。不开源。自TensorRT3版本开始绑定python接口（INT8精度的没有python接口），之前的版本只支持C++调用。在线inference，注重延迟和吞吐量。
 
 
 
