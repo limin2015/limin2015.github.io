@@ -129,4 +129,9 @@ http://blog.163.com/wujiaxing009@126/blog/static/71988399201712035958365/
 
 # cudaMemcpyToSymbol有没有异步的函数
 
-    我没查到，应该是没有。
+
+在下面的页面可以搜到：cudaMemcpyToSymbolAsync //Copies data to the given symbol on the device
+
+    http://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html
+
+换上之后，仍然没有什么提高。

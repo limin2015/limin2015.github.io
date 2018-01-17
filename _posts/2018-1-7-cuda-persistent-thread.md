@@ -111,3 +111,13 @@ Since each thread remains persistent throughout the execution of a kernel, and i
 The traditional programming environment does not expose the hardware scheduler to the programmer, thus limiting the ability to exploit workload communication patterns. In contrast, the PT style bypasses the hard- ware scheduler by relying on a work queue of all blocks that are to be processed for kernel execution to com- plete. When a block finishes, it checks the queue for more work and continues doing so until no work is left, at which point the block retires.
 
 
+
+看一下这个paper：
+
+https://svail.github.io/persistent_rnns/
+
+
+# 引用
+
+
+[persistent-thread-stack-overflow](https://stackoverflow.com/questions/14821029/persistent-threads-in-opencl-and-cuda)

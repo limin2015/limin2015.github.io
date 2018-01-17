@@ -51,6 +51,12 @@ Xipeng Shen实验室做的特别广泛，hpc和nlp相关的，机器学习算法
 
 
 
+[baidu-Silicon Valley AI Lab](https://svail.github.io/)
+
+http://svail.github.io/rnn_perf/
+
+
+
 ## ML相关的
 
 
@@ -58,6 +64,13 @@ Xipeng Shen实验室做的特别广泛，hpc和nlp相关的，机器学习算法
 
 1. 提出fast-rcnn等目标检测算法的大神：
 [rbg](http://www.rossgirshick.info/)
+
+
+
+
+## NLP
+
+[karpathyblog](https://disqus.com/home/forums/karpathyblog/)
 
 
 
