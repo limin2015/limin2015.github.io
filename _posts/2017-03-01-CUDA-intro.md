@@ -127,4 +127,6 @@ thrust：
 
 NPP：
 
+CULA是什么库？开源吗：基于CUDA的一个lapack库。
+
 

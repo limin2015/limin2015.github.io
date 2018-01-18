@@ -13,12 +13,14 @@ tags : [c++]
 
 1. 
 
-    //函数模板---使用体现：调用函数时传递的参数类型。（下面的class关键字可以改成typename）
-    template<class 数据类型参数标识符>
-    <返回类型><函数名>(参数表)
-    {
-        函数体
-    }
+
+        //函数模板---使用体现：调用函数时传递的参数类型。（下面的class关键字可以改成typename）
+
+        template<class 数据类型参数标识符>
+        <返回类型><函数名>(参数表)
+        {
+            函数体
+        }
 
 2. 函数模板的特化：
 
@@ -33,20 +35,20 @@ tags : [c++]
 
 1. 
 
-    //类模板---使用体现：声明类对象时 Stack<类型> s;
-    template<class T>
-    class Stack
-    {
-    　public:
-    　　T pop();
-    　　bool push(T e);
-    　private:
-    　　StackNode<T> *p;
-    }
+        //类模板---使用体现：声明类对象时 Stack<类型> s;
+        template<class T>
+        class Stack
+        {
+        　public:
+        　　T pop();
+        　　bool push(T e);
+        　private:
+        　　StackNode<T> *p;
+        }
 
-    template<class T>//类模板外的 成员函数实现
-    T Stack<T>::pop()
-    {...}
+        template<class T>//类模板外的 成员函数实现
+        T Stack<T>::pop()
+        {...}
 
 2. 类模板的三种特化：
 
@@ -63,13 +65,13 @@ http://blog.csdn.net/kybd2006/article/details/1873803
 
     下面的这个没看懂！！！
 
-    //结构体模板---使用体现：声明结构元素时 StackNode<类型> s;
-    template<class T>
-    struct StackNode
-    {
-    　　struct T data;
-    　　struct StackNode<T> *next;
-    };
+        //结构体模板---使用体现：声明结构元素时 StackNode<类型> s;
+        template<class T>
+        struct StackNode
+        {
+        　　struct T data;
+        　　struct StackNode<T> *next;
+        };
 
 
 
