@@ -123,8 +123,6 @@ C++11里，指针初始化都应该设为nullptr。
 
 
 
-# 左值引用和右值引用
-
 
 
 
@@ -148,3 +146,28 @@ C++11里，指针初始化都应该设为nullptr。
 # 引用
 
 1. http://blog.csdn.net/my_business/article/details/7477615
+
+
+
+
+# typename的使用
+
+1. 用在模板的形式参数中，表示var_name是一个数据类型（普通数据类型或者自定义类型）。于class完全一样的效果。
+
+template < typename var_name  > 
+class class_name; 
+
+2. typename var_name;表示var_name的定义还没有给出，这个语句通常出现在模版的定义内,例如：
+
+	template <class T>
+	void f() {
+	typedef typename T::A TA;     // 声明 TA 的类型为 T::A
+	TA a5;                      // 声明 a5 的类型为 TA
+	typename T::A a6;             // 声明 a6 的类型为 T::A
+	TA * pta6;                     // 声明 pta6 的类型为 TA 的指针
+	}
+
+	因为T是一个模版实例化时才知道的类型，所以编译器更对T::A不知所云，为了通知
+	编译器T::A是一个合法的**类型**，不是类的成员，使用typename语句可以避免编译器报错。
+
+

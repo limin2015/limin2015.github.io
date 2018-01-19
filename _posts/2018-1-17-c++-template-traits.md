@@ -8,6 +8,9 @@ tags : [c++]
 
 # c++的模板编程
 
+下面的博客写的非常好：
+
+https://github.com/wuye9036/CppTemplateTutorial
 
 ## 函数模板
 

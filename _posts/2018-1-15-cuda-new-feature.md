@@ -40,3 +40,29 @@ https://zhuanlan.zhihu.com/madeye/20125242
 
 # 块间同步in cuda 9
 
+
+## __syncthreads()
+
+一个块内的线程同步。
+
+
+## __threadfence的使用
+
+__threadfence function stalls current thread until its writes to global memory are guaranteed to be visible by all other threads in the grid. So, if you do something like。
+
+__threadfence函数不是同步函数，属于memory fence函数，不能保证所有线程运行到同一位置，只保证执行memory fence函数的线程生产的数据能够安全地被其他线程消费（可见）。
+
+
+1. __threadfence
+
+一个线程调用__threadfence后，该线程在该语句前对全局存储器或共享存储器的访问已经全部完成，执行结果对grid中的所有线程可见。
+
+2. __threadfence_block
+
+一个线程调用__threadfence_block后，该线程在该语句前对全局存储器或者共享存储器的访问已经全部完成，执行结果对block中的所有线程可见。
+
+3. 
+
+
+## 
+

@@ -77,3 +77,52 @@ Afterwards, to control the number of active workers per SM (i.e., wantedNumPerSM
 the extra workers (M −wantedNumPerSM) exit immediately. 
 This process is called **retreating**. 
 Based on these two processes, we can control which jobs should be processed by which SM and how many workers per SM.
+
+
+
+# 4. 实验细节
+
+    /∗∗∗∗ CPU−side code ∗∗∗∗/ 
+    main (){
+    ... 
+    
+    /***begin _SMC_init;*****/
+    unsigned int ∗ SMC workersNeeded = SMC numNeeded(); 
+    unsigned int ∗ SMC newChunkSeq = SMC buildChunkSeq(); 
+    unsigned int ∗ SMC workerCount= SMC initiateArray();
+    /***end of _SMC_init;*****/
+    invoke original kernel with three extra arguments:
+            SMC chunkCount, SMC newChunkSeq, K/M .
+    ...
+    }
+
+    /∗∗∗∗ GPU−side code ∗∗∗∗/ 
+    global kernel (..., unsigned int ∗ SMC chunkCount, unsigned int ∗ SMC newChunkSeq, unsigned int SMC chunksPerSM) {
+    
+        /*******begin _SMC_Begin ******/
+        _shared int _SMC_workingCTAs; 
+        _SMC_getSMid; 
+        if(offsetInCTA == 0) 
+            SMC workingCTAs = atomicInc (&_SMC_workerCount[_SMC_smid], INT MAX); 
+        synchthreads(); 
+        if(_SMCS_workingCTAs >=_SMC_workersNeeded) return; 
+        int _SMC_chunksPerCTA = _SMC_chunksPerSM /_SMC_workersNeeded;
+        int _SMC_startChunkIDidx = _SMC_smid ∗_SMC_chunksPerSM + _SMC_workingCTAs ∗ _SMC_chunksPerCTA;
+        for (int _SMC_chunkIDidx = _SMC_startChunkIDidx; _SMC_chunkIDidx < _SMC_startChunkIDidx+ _SMC_chunksPerCTA ; _SMC_chunkIDidx++) {
+            _SMC_chunkID = _SMC_newChunkSeq[_SMC_chunkIDidx];
+        }
+     /*******end _SMC_Begin ******/
+
+    // the original kernel with the ID of CTA 
+    // replaced with SMC chunkID ... ...
+    _SMC_End 
+    }
+
+# 补充知识
+
+1.轮询调度算法的原理：
+
+是每一次把来自用户的请求轮流分配给内部中的服务器，从1开始，直到N(内部服务器个数)，然后重新开始循环。
+也就是（第i个元素/任务分给第i/numofThreads 个线程）。
+
+
