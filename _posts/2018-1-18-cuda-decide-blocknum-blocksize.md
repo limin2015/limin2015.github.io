@@ -7,7 +7,9 @@ tags : [CUDA编程]
 ---
 
 
-## 1. 确定每一块中的线程数，和每个grid中的块数的原则是什么？（太重要了的！！）
+探索开启kernel时，如何设置每一块中的线程数，和每个grid中的块数。
+
+## 1. 确定每一块中的线程数，和每个grid中的块数的原则是什么？
 
 1.1  active-thread和active-block是如何计算出来的？
 
@@ -56,7 +58,7 @@ maxWarps = prop.maxThreadsPerMultiProcessor / prop.warpSize;
 2.2. nvidia的sample的SDK中有一个occupancy的计算工具：
     NVIDIA_CUDA-8.0_Samples/0_Simple/simpleOccupancy
 
-	内部有两个函数：[nvidia-doc](http://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL_1g5a5d67a3c907371559)ba692195e8a38c
+内部有两个函数：[nvidia-doc](http://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__HIGHLEVEL.html#group__CUDART__HIGHLEVEL_1g5a5d67a3c907371559)ba692195e8a38c
 
 	（1）cudaOccupancyMaxPotentialBlockSize( int* minGridSize, int* blockSize, T func, UnaryFunction blockSizeToDynamicSMemSize, int  blockSizeLimit = 0, unsigned int  flags = 0 )
 
@@ -76,7 +78,7 @@ Returns in *numBlocks the maximum number of active blocks per streaming multipro
 ## 理解一下下面的两句话
 
 （1）too much shared memory allocated to one block limits the number of active blocks per multiprocessor:
-若一个块内分配的shmem太多，则活跃的块数就会受限制。（有什么具体的关系吗？）
+若一个块内分配的shmem太多，则活跃的块数就会受限制。
 
 
 

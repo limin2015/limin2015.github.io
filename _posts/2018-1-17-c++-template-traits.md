@@ -92,4 +92,4 @@ http://blog.csdn.net/kybd2006/article/details/1873803
 
 这篇博客讲的非常清楚：
 
-http://blog.csdn.net/my_business/article/details/7891687
+[【C++模版之旅】神奇的Traits](http://blog.csdn.net/my_business/article/details/7891687)
