@@ -7,7 +7,15 @@ tags:		[CUDA编程]
 ---
 
 
-介绍cuda stream技术。
+介绍cuda stream技术。流技术是用来支持current kernel execution的。
+
+
+# 一个问题
+
+之前，和师弟讨论过一个问题，NVIDIA的current kernel execution，是不是不需要将每个kernel放到单独的流中，直接连续的spawn多个kernel，kernel就可以并发执行？
+
+paper[Efficient Kernel Management on GPUs](http://xueshu.baidu.com/s?wd=paperuri:(95553d5d2aa62e7f7a47add23dabdd9c)&filter=sc_long_sign&sc_ks_para=q%3DEfficient+kernel+management+on+GPUs&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=2527773259732545580)
+中说current kernel execution是用stream技术来具体实现的。
 
 
 # 单个stream的情况

@@ -119,3 +119,28 @@ https://zhuanlan.zhihu.com/p/21102748
 http://colah.github.io/about.html
 
 
+
+
+# 1-21
+
+1. Efficient Kernel Management on GPUs 这个paper不错。
+
+2. The Case for GPGPU Spatial Multitasking读
+
+3. Dynamic Resource Management for Efficient Utilization of Multitasking GPUs
+
+
+4. Optimizing data warehousing applications for GPUs using dynamic stream scheduling and dispatch of fused and split kernels
+
+
+5. Optimizing Memory Efficiency for Convolution Kernels on Kepler GPUs
+
+
+6. maxDNN: An Efficient Convolution Kernel for Deep Learning with Maxwell GPUs
+
+7. Kernel Fusion: An Effective Method for Better Power Efficiency on Multithreaded GPU
+
+8. Systematic Fusion of CUDA Kernels for Iterative Sparse Linear System Solvers
+
+
+9. 
