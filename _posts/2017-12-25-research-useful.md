@@ -83,3 +83,5 @@ http://svail.github.io/rnn_perf/
 
 [谢涛-独立研究者的技能培养目标：AVDEC](http://blog.sina.com.cn/s/blog_82c0ff440100zwbf.html)
 
+[刀熊说说 on zhihu](https://www.zhihu.com/people/yang-ya-xin-36): he writes many passenges about how to do research?
+
