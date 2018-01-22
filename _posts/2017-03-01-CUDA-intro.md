@@ -48,11 +48,12 @@ GTX 280：
 
 Tesla:
 
-Fermi:
 
-Kepler:
+Fermi:supports concurrent kernel execution，
 
-maxwell
+Kepler:introducing the Hyper-Q feature，
+
+maxwell:
 
 pascal:
 
