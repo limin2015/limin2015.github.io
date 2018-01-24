@@ -7,9 +7,10 @@ tags : [CUDA编程]
 ---
 
 
-探索开启kernel时，如何设置每一块中的线程数，和每个grid中的块数。
+探索开启kernel时，如何设置每一块中的线程数，和每个grid中的块数。以及active-block和active-threads是多少。
 
-## 1. 确定每一块中的线程数，和每个grid中的块数的原则是什么？
+
+# 1. 确定每一块中的线程数，和每个grid中的块数的原则是什么？
 
 1.1  active-thread和active-block是如何计算出来的？
 
@@ -38,7 +39,7 @@ gpu硬件通过warp的time-slice的调度来达到隐藏一些warp的访存延�
  那么至少需要（400/4）个active-warp (TODO)
 
 
-## 2. gpu的Occupancy（TODO）
+# 2. gpu的Occupancy（TODO）
 
 2.1. 什么是occupancy？
 
@@ -75,7 +76,7 @@ Returns in *numBlocks the maximum number of active blocks per streaming multipro
 
 
 
-## 理解一下下面的两句话
+# 理解一下下面的两句话
 
 （1）too much shared memory allocated to one block limits the number of active blocks per multiprocessor:
 若一个块内分配的shmem太多，则活跃的块数就会受限制。
@@ -88,6 +89,14 @@ http://blog.csdn.net/u013443737/article/details/23422569
 
 
 
+# decide maximum active threads and maximum active  block
+
+
+**计算**：判断一个块中的active threads和active  block是多少。
+
+（1）如果一个 thread 要用到 16 个 register 的话(在 kernel 中宣告的变量)，那一个 SM 的 8192 个 register 实际上只能让 512 个 thread 来使用。（决定了active threads的数目）
+
+（2）shared memory 由于是 thread block 共享的，因此变成是要看一个 block 要用多少的 shread memory、一个 SM 的 16KB 能分给多少个 block 了。 （决定了一个SM中的active block的数目）
 
 
 

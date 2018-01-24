@@ -68,4 +68,17 @@ https://blogs.msdn.microsoft.com/jennifer/2009/06/26/work-stealing-in-net-4-0/
 
 # work sharing
 
-1. 
+这篇文献里有介绍（TODO: 还没有读）
+
+ The Art of Multiprocessor Programming
+
+
+
+ # task donation
+
+每个处理器对应着一个工作队列，当一个队列q满了的时候，若再想往这个队列中添加任务，就会溢出。为了解决这个问题，q就会find 其他的不满的队列p，然后把任务插入到队列p中（插入时要加锁）。
+（与stealing的过程相反）
+
+这篇文章里面有介绍的：
+
+ Task Management for Irregular-ParallelWorkloads on the GPU Stanley

@@ -57,6 +57,8 @@ http://svail.github.io/rnn_perf/
 
 
 
+[jilong xue](http://net.pku.edu.cn/~xjl/)
+
 ## ML相关的
 
 

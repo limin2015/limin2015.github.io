@@ -28,3 +28,10 @@ tags:
 
 [浮点峰值那些事儿](https://zhuanlan.zhihu.com/p/28226956)
 
+
+
+# MIMD
+
+MIMD: 多指令流，多数据流
+At any time, different processors may be executing different instructions on different pieces of data
+
