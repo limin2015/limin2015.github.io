@@ -36,6 +36,12 @@ http://blog.csdn.net/stanjiang2010/article/details/5655143
 
 **nvprof**：
 
+
+这个命令：可以
+
+nvprof --print-gpu-trace matrixMul
+
+
 1. 不加任何参数时：
 
 	nvprof ./a.out

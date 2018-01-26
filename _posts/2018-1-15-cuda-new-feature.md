@@ -64,5 +64,9 @@ __threadfence函数不是同步函数，属于memory fence函数，不能保证�
 3. 
 
 
-## 
+## cuda9中的块同步
+
+http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#cooperative-groups
+
+
 

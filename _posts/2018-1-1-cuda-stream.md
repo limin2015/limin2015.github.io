@@ -27,7 +27,9 @@ http://blog.csdn.net/u010335328/article/details/52453499
 
 看完上面的blog后，有个疑问，他实现的是不是就是双buffer啊？？（内部有依赖判断？？）
 
+NOTE:
 
+all GPU-related tasks placed in one stream (which is default behaviour) are executed sequentially.
 
 # multi-stream
 

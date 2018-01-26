@@ -16,12 +16,13 @@ tags : [CUDA编程]
 
 这是通过设备属性查询出来的值：
 
-  Total amount of constant memory:               65536 bytes
-  Total amount of shared memory per block:       49152 bytes
-  Total number of registers available per block: 65536
-  Warp size:                                     32
-  Maximum number of threads per multiprocessor:  2048
-  Maximum number of threads per block:           1024
+
+    Total amount of constant memory:               65536 bytes
+    Total amount of shared memory per block:       49152 bytes
+    Total number of registers available per block: 65536
+    Warp size:                                     32
+    Maximum number of threads per multiprocessor:  2048
+    Maximum number of threads per block:           1024
 
 
 （1）若一个block开256（**程序员设置的**）个线程，每个线程使用a个寄存器（程序写好后，可以数出来，程序的特点），
