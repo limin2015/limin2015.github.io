@@ -60,3 +60,14 @@ tags : [tools]
 
 移动光标到下一个单词的词首，使用命令"w"，移动光标到上一个单词的词首，使用命令"b"；移动光标到下一个单词的结尾，用命令"e"，移动光标到上一个单词的结尾，使用命令"ge"。
 
+
+
+
+3. tag的使用：
+
+用ctags命令生成tag文件，方便看源代码。
+
+https://blog.easwy.com/archives/advanced-vim-skills-use-ctags-tag-file/
+
+下载vim的中文手册，好好学习一下高级功能，加快开发速度。
+
