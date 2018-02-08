@@ -71,3 +71,4 @@ https://blog.easwy.com/archives/advanced-vim-skills-use-ctags-tag-file/
 
 下载vim的中文手册，好好学习一下高级功能，加快开发速度。
 
+https://jaist.dl.sourceforge.net/project/vimcdoc/pdf-manual/user_manual-2.1.0.pdf
