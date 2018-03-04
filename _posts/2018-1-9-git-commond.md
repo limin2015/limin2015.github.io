@@ -7,6 +7,15 @@ tags : [tools]
 ---
 
 
+# git安装和配置
+
+[下载地址](https://git-scm.com/downloads)
+
+下完一路默认安装即可。
+
+[配置](http://www.cnblogs.com/Bonker/p/3441781.html)
+
+
 # 整理一下用到的git命令
 
 http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html
