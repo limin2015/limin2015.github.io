@@ -13,10 +13,9 @@ tags:       [paper]
 
 # 摘要
 
-1. provides a systematic examination of various existing pipeline exe- cutionmodels onGPU, and analyzes their strengths andweaknesses
+1. provides a systematic examination of various existing pipeline execution models on GPU, and analyzes their strengths and weaknesses
 2. proposes three new execution models equipped with much improved controllability, including a hybrid model that is capable of getting the strengths of all. 并将这些模型写进了一个库里：versapipe.
 3. VersaPipe produces up to 6.90× (2.88× on average) speedups over the original manual implementations.
-
 
 
 # 疑问
@@ -68,7 +67,7 @@ cess a data item in a pipeline stage) of a GPU kerenl to the GPU SMs. It is thro
 
 ## dynamic parallelism：
 
-Dynamic Parallelism (DP) allows threads running on GPUto launch subkernels。
+Dynamic Parallelism (DP) allows threads running on GPU to launch subkernels。
 
 
 

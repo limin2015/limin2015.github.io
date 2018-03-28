@@ -216,3 +216,16 @@ diff file_1 file_2
 eg：看是否定义了“P4”变量
 
 gcc -posix -dM -E -</dev/null | grep "P4"
+
+## 输出重定向
+
+如果希望将 stdout（用1表示） 和 stderr（用2表示） 合并后重定向到 file，可以这样写：
+
+$ command > file 2>&1
+或者
+$ command >> file 2>&1
+
+eg：把make命令后出现的输出重定向到reg.txt:
+
+$ make >> reg.txt 2>&1
+
