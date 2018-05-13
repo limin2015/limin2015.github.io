@@ -27,5 +27,7 @@ tags:       [machine-learning-basic]
 
 # reference
 
+李航的《统计机器学习》
+
 [kd-tree-weixin](https://mp.weixin.qq.com/s?__biz=MzI4MDYzNzg4Mw==&mid=2247483793&idx=1&sn=d42f4f06225cd1f792912dfecdc800ea&chksm=ebb43945dcc3b0538ba10187c999a050137b96a05f402b9fe99f0a972d7ba0bce5067bf7efb3&scene=21#wechat_redirect)
 

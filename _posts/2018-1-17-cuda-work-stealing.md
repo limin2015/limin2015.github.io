@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      cuda-work-sharing-and-work-stealing
+title:      work-sharing-and-work-stealing
 keywords:   work-stealing
-category:   CUDA
-tags:		[CUDA编程]
+category:   高性能基础学习
+tags:		[高性能基础学习]
 ---
 
 任务调度里面的work stealing and work sharing.

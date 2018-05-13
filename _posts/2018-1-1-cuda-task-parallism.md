@@ -1,19 +1,19 @@
 ---
 layout:     post
-title:      CUDA的stream(任务并行related)
-keywords:   stream
+title:      GPU上的任务并行
+keywords:   stream, hyperQ
 category:   CUDA
 tags:		[CUDA编程]
 ---
 
+主要介绍GPU上的任务并行相关的一些知识和技术。
 
-TODO: 介绍cuda stream技术。流技术是用来支持current kernel execution的。
+# CUDA的stream
+
+流技术是GPU上用来支持current kernel execution执行的一种技术。
 
 
-
-
-
-# 一个问题
+## 一个问题
 
 之前，和师弟讨论过一个问题，NVIDIA的current kernel execution，是不是不需要将每个kernel放到单独的流中，直接连续的spawn多个kernel，kernel就可以并发执行？
 
@@ -21,7 +21,7 @@ paper[Efficient Kernel Management on GPUs](http://xueshu.baidu.com/s?wd=paperuri
 中说current kernel execution是用stream技术来具体实现的。
 
 
-# 单个stream的情况
+## 单个stream的情况
 
 http://blog.csdn.net/u010335328/article/details/52453499
 
@@ -31,7 +31,7 @@ NOTE:
 
 all GPU-related tasks placed in one stream (which is default behaviour) are executed sequentially.
 
-# multi-stream
+## multi-stream
 
 下面的这个解释很棒：
 http://blog.163.com/wujiaxing009@126/blog/static/71988399201712035958365/
@@ -110,38 +110,9 @@ http://blog.163.com/wujiaxing009@126/blog/static/71988399201712035958365/
     ![](/images/cuda/stream-1.png)
 
 
+# 流技术与hyper-q（TODO）
+
+[流技术与hyper-q区别和联系](http://blog.163.com/wujiaxing009@126/blog/static/71988399201712035958365/)
 
 
 
-#  cublas中的gemm是不是不支持stream啊？因为没有提供stream这个参数
-
-支持。
-
-[can be solved by call a routine](http://docs.nvidia.com/cuda/cublas/#parallelism-with-streams)
-
-
-        If the application uses the results computed by multiple independent tasks, CUDA™ streams can be used to overlap the computation performed in these tasks. 
-
-        The application can conceptually associate each stream with each task. In order to achieve the overlap of computation between the tasks, the user should create CUDA™ streams using the function cudaStreamCreate() and set the stream to be used by each individual cuBLAS library routine by calling cublasSetStream() just before calling the actual cuBLAS routine. Then, the computation performed in separate streams would be overlapped automatically when possible on the GPU. This approach is especially useful when the computation performed by a single task is relatively small and is not enough to fill the GPU with work. 
-
-        We recommend using the new cuBLAS API with scalar parameters and results passed by reference in the device memory to achieve maximum overlap of the computation when using streams. 
-
-
-        Read more at: http://docs.nvidia.com/cuda/cublas/index.html#ixzz54JN8KiZb 
-        Follow us: @GPUComputing on Twitter | NVIDIA on Facebook
-
-
-# cudaMemcpyAsync：异步传输
-
-注意用于异步传输的数组，必须是in page-locked memory（内存空间是物理地址，没有对应的虚拟地址。）
-
-
-
-# cudaMemcpyToSymbol有没有异步的函数
-
-
-在下面的页面可以搜到：cudaMemcpyToSymbolAsync //Copies data to the given symbol on the device
-
-    http://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html
-
-换上之后，仍然没有什么提高。

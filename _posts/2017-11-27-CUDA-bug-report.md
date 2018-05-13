@@ -15,6 +15,13 @@ tags : [CUDA编程]
 http://blog.csdn.net/litdaguang/article/details/50462325
 
 
+**关于在设备上打印**(输出，主要用于debug)：
+
+    compute capability less than 2.0, the function cuPrintf is called.
+    others call printf();
+
+	
+
 ## 常见bug和解决方案整理
 
 
@@ -35,6 +42,8 @@ http://blog.csdn.net/litdaguang/article/details/50462325
 3.host上的内存指针，和设备上的内存指针，要分清楚，malloc和free，及函数调用时，都不要写错了的。
 
 4.
+
+
 
 
 

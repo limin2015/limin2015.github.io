@@ -16,8 +16,6 @@ https://devblogs.nvidia.com/parallelforall/new-features-cuda-7-5/
 https://zhuanlan.zhihu.com/madeye/20125242
 
 
-
-
 ## fp16的指令
 
 从xue的lstm的inference的代码中，整理出来：为什么这些函数，我都没用搜到呢？在哪个文档中？？

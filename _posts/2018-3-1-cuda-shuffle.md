@@ -31,10 +31,6 @@ int __shfl_down(int var, unsigned int delta, int width=warpSize)
 int __shfl_xor(int var, int laneMask, int width=warpSize)
 
 
-
-
-
-
 ## ref
 
 https://www.cnblogs.com/1024incn/p/4706215.html
@@ -69,10 +65,6 @@ http://blog.csdn.net/u010646276/article/details/46804545
     __all(int predicate)：指的是predicate与0进行比较，如果当前线程所在的Wrap所有线程对应predicate不为0，则返回1。
     __any(int predicate)：指的是predicate与0进行比较，如果当前线程所在的Wrap有一个线程对应的predicate值不为0，则返回1。
     __ballot(int predicate)：指的是当前线程所在的Wrap中第N个线程对应的predicate值不为0，则将整数0的第N位进行置位。
-
-
-
-
 
 
 # 位操作：（TODO：需要整理到别的blog中）

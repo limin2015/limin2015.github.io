@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  CUDA性能优化-pinned memory
+title:  CUDA性能优化-memory相关的
 keywords: CUDA
 categories : [CUDA]
 tags : [CUDA编程]
@@ -42,5 +42,45 @@ pinned memory分配的空间位于物理内存，即RAM中，故可分配的最�
 **ref**：
 <https://devtalk.nvidia.com/default/topic/463301/cuda-programming-and-performance/using-async-memcopy-without-using-cudamallochost-cudahostalloc-/>
 
+
+
+# 异步传输相关
+
+## cudaMemcpyAsync：异步传输
+
+注意用于异步传输的数组，必须是in page locked（又叫pinned memory） memory（内存空间是物理地址，没有对应的虚拟地址。）
+
+
+
+## cudaMemcpyToSymbol有没有对应的异步的函数
+
+有。
+
+在下面的页面可以搜到：cudaMemcpyToSymbolAsync //Copies data to the given symbol on the device
+
+    http://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__MEMORY.html
+
+换上之后，仍然没有什么提高。
+
+
+
+# 关于存储体冲突
+
+bank-conflict:
+
+
+##如何减少存储体冲突？
+
+
+## 关于bank conflict的解释：
+
+![](/images/cuda/bank-conflict.png)
+
+一个块内的线程，最好相邻线程访问的是相邻的内存。否则容易bank conflict。
+
+
+下面的介绍很好：（good！！）
+
+http://blog.csdn.net/u013701860/article/details/50253343
 
 
