@@ -86,6 +86,13 @@ caffe中的卷积使用的是：img2col+gemm;
 
 
 
+# why-gemm-is-at-the-heart-of-deep-learning
+
+
+[why-gemm-is-at-the-heart-of-deep-learning](https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/)
+
+
+
 # 总结：（分析深度学习框架中的operator的计算模式）
 
 卷积层->pool层->sigmoid->relu->softmax->全连接层（or inner_product层）
