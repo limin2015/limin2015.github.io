@@ -23,7 +23,7 @@ tags:
 ## 算法描述
 
 
-![](/images/paper/spmspv.PNG)
+![](/images/paper/spmspv.png)
 
 
 ## 我的收获
