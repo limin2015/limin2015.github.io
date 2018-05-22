@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  paper reading-A work efficient parallel sparse matrix-sparse vector
+title:  paper reading-A work efficient parallel sparse matrix sparse vector
 multiplication algorithm
 keywords: SpMSpV, multi-thread
 categories : paper
