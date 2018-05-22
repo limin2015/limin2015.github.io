@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  paper reading-A work efficient parallel sparse matrix sparse vector
-multiplication algorithm
-keywords: SpMSpV, multi-thread
+title:  paper reading-A work efficient parallel sparse matrix sparse vector multiplication algorithm
+keywords: SpMSpV
 categories : paper
 tags:
   - paper
 ---
 
-发表于2017年的IPDPS
+发表于2017年的IPDPS：A work efficient parallel sparse matrix sparse vector
+multiplication algorithm
 
 ## 摘要
 1.在多核和KNL上设计了一个多线程的系数矩阵乘系数向量（SpMSpV）的kernel，使用的是openmp。
