@@ -22,7 +22,6 @@ tags:
   2. a technique for making bounds tighter, allowing further redundant distance calculations to be eliminated. The technique, illustrated in Figure 1, can be applied to all existing bounding-based k- means algorithms. （提出了一个更紧致的bound，对所有的基于三角不等式的方法都有用。）
 
   3. 提供了开源的所有的三角不等式的算法的并行实现：
-  
     [eakmeans](https://github.com/idiap/eakmeans)
 
 

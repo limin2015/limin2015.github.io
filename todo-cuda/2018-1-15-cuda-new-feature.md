@@ -9,6 +9,9 @@ tags:		[CUDA编程]
 介绍整理一些cuda的新的特性：如fp16， 块间同步等；
 
 
+
+
+
 # New Features in CUDA 7.5 about 半精度（fp16）
 
 https://devblogs.nvidia.com/parallelforall/new-features-cuda-7-5/
@@ -39,9 +42,15 @@ https://zhuanlan.zhihu.com/madeye/20125242
 # 块间同步in cuda 9
 
 
-## __syncthreads()
+## GPU中的同步函数（已有的）：
 
-一个块内的线程同步。
+1. 什么时候使用cudaThreadSynchronize()？
+
+等待kernel执行完毕。
+cpu端发起kernel<<< >>>之后（异步的），就可以继续执行下面的程序（该程序段与gpu加速的没有依赖关系）。使用
+cudaThreadSynchronize()后，cpu会等待gpu的结果返回后，才继续执行下面的指令。
+
+2. 块内同步函数： __syncthreads()，用于一个块内的线程同步。
 
 
 ## __threadfence的使用
@@ -68,3 +77,10 @@ http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#cooperative-grou
 
 
 
+# 未整理：
+
+## float2和float4向量数据类型是什么鬼？？
+
+
+
+## launch bounds  及  if (__CUDA_ARCH__ >= 200)这句是什么意思：
