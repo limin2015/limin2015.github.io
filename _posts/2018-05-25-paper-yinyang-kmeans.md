@@ -99,6 +99,35 @@ tags:
 
  ![](/images/paper/yinyang-compare-1.PNG)
 
+ ###Elkan的算法：
+
+ 1. 定理简介：
+
+  **lemma-1**：
+  ![](/images/paper/yinyang-elkan.PNG)
+
+  这个lemma用于在同一个迭代内部的时候消除多余的距离计算。
+  
+  **lemma-1的应用是**：给出了每一个数据点到最近的中心点的一个**上界**
+  ![](/images/paper/yinyang-elkan-3.PNG)
+
+  **lemma-2**：
+  ![](/images/paper/yinyang-elkan-2.PNG)
+  这个lemma其实就是两边之差小于第三边。这里用来在不同迭代步之间，消除多余的距离计算。
+  
+  **lemma-2的应用**：给出了下一次迭代时，每一个数据点到每一个中心点的距离的一个**下界**
+  ![](/images/paper/yinyang-elkan-4.PNG)
+
+
+
+
+ 2. 算法：
+  ![](/images/paper/yinyang-elkan-algo-1.PNG)
+  ![](/images/paper/yinyang-elkan-algo-2.PNG)
+
+
+
+
 2. 这3中实现都是在Graphlab中实现的，都是parallel的。有源代码。
 
 3. 它的实验分析很细致。
