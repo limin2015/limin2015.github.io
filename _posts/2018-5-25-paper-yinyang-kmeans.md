@@ -99,7 +99,29 @@ tags:
 
  ![](/images/paper/yinyang-compare-1.PNG)
 
- ###Elkan的算法：
+ 
+2. 这3中实现都是在Graphlab中实现的，都是parallel的。有源代码。
+
+3. 它的实验分析很细致。
+
+
+
+
+## 我的收获
+
+1. 推导了这个paper中的公式，整体感觉不难，但是也不好想。
+思考的方式是从：在上一轮计算结果的基础上，如何在下一轮的计算中，减少距离计算？
+
+2. TODO:
+我需要整理另外的2个基于三角不等式的算法和引用它的一个三角不等式的paper：Fast K-Means with Accurate Bounds
+
+
+
+
+# Elkan的算法
+
+可以参考下这个blog：
+
 
  1. 定理简介：
 
@@ -120,13 +142,10 @@ tags:
   这个lemma其实就是两边之差小于第三边。这里用来在不同迭代步之间，消除多余的距离计算。
   
   **lemma-2的应用**：给出了下一次迭代时，每一个数据点到每一个中心点的距离的一个**下界**
-  
+
   ![](/images/paper/yinyang-elkan-4.PNG)
 
-
-
-
- 2. 算法：
+2. 算法：
 
   ![](/images/paper/yinyang-elkan-algo-1.PNG)
 
@@ -134,16 +153,6 @@ tags:
 
 
 
+# Drake的算法：
 
-2. 这3中实现都是在Graphlab中实现的，都是parallel的。有源代码。
-
-3. 它的实验分析很细致。
-
-
-## 我的收获
-
-1. 推导了这个paper中的公式，整体感觉不难，但是也不好想。
-思考的方式是从：在上一轮计算结果的基础上，如何在下一轮的计算中，减少距离计算？
-
-2. TODO:
-我需要整理另外的2个基于三角不等式的算法和引用它的一个三角不等式的paper：Fast K-Means with Accurate Bounds
+TODO:
